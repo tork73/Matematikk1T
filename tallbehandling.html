@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgave 1 &#8212; Matematikk 1T</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Å bli god i matematikk" href="matematikk.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Oppgave 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tallbehandling.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftallbehandling.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Oppgave 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppgave-2">
+   Oppgave 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-forskjellen-pa-text-2-2-og-text-2-2">
+   Hva er forskjellen på
+   <span class="math notranslate nohighlight">
+    \(\text{-}2^2\)
+   </span>
+   og
+   <span class="math notranslate nohighlight">
+    \((\text{-}2)^2\)
+   </span>
+   ?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oppgave-3">
+     Oppgave 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#negative-tall">
+   Negative tall
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oppgave-4">
+     Oppgave 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Oppgave 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Oppgave 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppgave-2">
+   Oppgave 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-forskjellen-pa-text-2-2-og-text-2-2">
+   Hva er forskjellen på
+   <span class="math notranslate nohighlight">
+    \(\text{-}2^2\)
+   </span>
+   og
+   <span class="math notranslate nohighlight">
+    \((\text{-}2)^2\)
+   </span>
+   ?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oppgave-3">
+     Oppgave 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#negative-tall">
+   Negative tall
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#oppgave-4">
+     Oppgave 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>På denne siden skal du lære å</p>
+<ul class="simple">
+<li><p>kunne regne ut sammensatte regneuttrykk med heltall, potenser og parenteser</p></li>
+<li><p>kunne bruke parenteser, de fire regneartene og potenser
+finne svaret på oppgaver som denne: <span class="math notranslate nohighlight">\(\text{-}2^2+2 \cdot (2-3)^2 -(3-6)+(1-2) \cdot (\text{-}2)\)</span></p></li>
+<li><p>kjenne til de ulike tallmengdene vi bruker (naturlige tall, hele tall, rasjonale tall, reelle tall.)</p></li>
+<li><p>kunne gjøre enkle utregninger i Python</p></li>
+</ul>
+<p>Når du skal skrive matematikk, kan du benytte matematiske symboler. I denne introduksjonsvideoen vil du møte noen av symbolene og en introduksjon til hvordan du kan bruke dem. På den neste siden vil du få vite mer om det matematiske språket.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/448593800?h=665099a6be&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Fra ungdomsskolen er du kjent med de fire regningsartene: addisjon, subtraksjon, multiplikasjon og divisjon. Her følger en liten repetisjon.</p>
+<p>Når vi adderer, får vi en sum. Tallene før og etter addisjonstegnene kalles ledd.</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{3x}_{\text{ledd}} + \underbrace{x}_{\text{ledd}} + \underbrace{2}_{\text{ledd}} = \underbrace{4x+2}_{\text{sum}}\]</div>
+<p>Når vi subtraherer, får vi en differanse. Tallene før og etter subtraksjonstegnene kalles ledd.</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{30}_{\text{ledd}} - \underbrace{10}_{\text{ledd}} = \underbrace{20}_{\text{differanse}} \]</div>
+<p>Når vi multipliserer, får vi et produkt. Tallene før og etter multiplikasjonstegnene kalles faktorer.</p>
+<div class="math notranslate nohighlight">
+\[\underbrace{2}_{\text{faktor}} \ \cdot \ \underbrace{3}_{\text{faktor}} \ \cdot \ \underbrace{x}_{\text{faktor}} \ = \ \underbrace{6x}_{\text{produkt}} \]</div>
+<p>Når vi dividerer, får vi en kvotient. Divisjonstegnet kan også skrives som brøkstrek. Tallene over og under brøkstreken kalles henholdsvis for teller og nevner.</p>
+<div class="math notranslate nohighlight">
+\[ \underbrace{4}_{\text{dividend}} \ : \ \underbrace{2}_{\text{divisor}} = \ \dfrac{\overbrace{4}^{\text{teller}}}{\underbrace{2}_{\text{nevner}}} \ = \ \underbrace{2}_{\text{kvotient}} \]</div>
+<p>(Hentet fra NDLA)</p>
+<div class="section" id="oppgave-1">
+<h1>Oppgave 1<a class="headerlink" href="#oppgave-1" title="Permalink to this headline">¶</a></h1>
+<p>Hvilken kalkulator regner riktig?</p>
+<p>Tomasz og Kari fikk denne oppgaven:
+$<span class="math notranslate nohighlight">\(3+2\cdot 4\)</span>$</p>
+<p>Begge tar fram kalkulatoren og skriver inn uttrykket, ved å trykke tastene, som det står. Kalkulatoren til Tomasz viser 11. Kalkulatoren til Kari viser 20.</p>
+<p>Hvorfor blir det to forskjellige svar? De har trykket på de samme tastene…</p>
+</div>
+<div class="section" id="oppgave-2">
+<h1>Oppgave 2<a class="headerlink" href="#oppgave-2" title="Permalink to this headline">¶</a></h1>
+<p>Vi har sett at 20 er en annen måte å skrive
+<span class="math notranslate nohighlight">\((3+2)\cdot4\)</span>.</p>
+<p>Nå skal du prøve å skrive 24 som et regnestykke. Gjør det gjerne så vanskelig som mulig.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/393901548?h=0c012f82c0&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Du har følgende regneoperasjoner i Python:</p>
+<table style="width:400px">
+    <thead>
+        <tr>
+            <th scope="col" style="text-align: center;">Symbol</th>
+            <th scope="col" style="text-align: center;">Operasjon</th>
+            <th scope="col" style="text-align: center;">Eksempel</th>
+            <th scope="col" style="text-align: center;">Resultat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: center;">+</td>
+            <td style="text-align: center;">Addisjon</td>
+            <td style="text-align: center;">1+2</td>
+            <td style="text-align: center;">3</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">&nbsp;-&nbsp;</td>
+            <td style="text-align: center;">Subtraksjon</td>
+            <td style="text-align: center;">23-11</td>
+            <td style="text-align: center;">12</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">*</td>
+            <td style="text-align: center;">Multiplikasjon</td>
+            <td style="text-align: center;">4.3*5.5</td>
+            <td style="text-align: center;">23.65</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">**</td>
+            <td style="text-align: center;">Potens</td>
+            <td style="text-align: center;">2**3</td>
+            <td style="text-align: center;">8</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">//</td>
+            <td style="text-align: center;">Heltallsdivisjon</td>
+            <td style="text-align: center;">10//4</td>
+            <td style="text-align: center;">2</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">%</td>
+            <td style="text-align: center;">Modulo (restledd)</td>
+            <td style="text-align: center;">28 % 12</td>
+            <td style="text-align: center;">4</td>
+        </tr>
+    </tbody>
+</table>
+<br>Merk at du må bruke punktum som desimalskilletegn i Python.<br><br>
+<p></p>
+<p>Regn ut følgende oppgaver i konsollen nedenfor:&nbsp;</p>
+<p><span class="math notranslate nohighlight">\( 34+5\cdot 32-1\)</span></p>
+<p><span class="math notranslate nohighlight">\( 2^5-2^3\)</span></p>
+<p>Hva er klokken om 1000 timer til, når den er 10.00 nå?&nbsp;</p>
+<iframe src="https://trinket.io/embed/python3/bf133cd102?outputOnly=true&amp;runOption=console&amp;showInstructions=true" width="100%" height="200" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+<br> Hvis du får meldingen «Connection to server timed out...» må du klikke på &gt;_Console i menyen til trinket. &nbsp;
+</div>
+<div class="section" id="hva-er-forskjellen-pa-text-2-2-og-text-2-2">
+<h1>Hva er forskjellen på <span class="math notranslate nohighlight">\(\text{-}2^2\)</span> og <span class="math notranslate nohighlight">\((\text{-}2)^2\)</span> ?<a class="headerlink" href="#hva-er-forskjellen-pa-text-2-2-og-text-2-2" title="Permalink to this headline">¶</a></h1>
+<p>Kanskje er den siste potensen mest åpenbar siden hele grunntallet er inne i en parentes?
+$<span class="math notranslate nohighlight">\((-2)^2=(-2) \cdot (-2) = 4\)</span>$</p>
+<p>Parentesene benyttes til å vise hva grunntallet i potensen er.
+I det andre tilfellet er det ikke like åpenbart. «<span class="math notranslate nohighlight">\(-2^2\)</span>» betyr «det negative tallet <span class="math notranslate nohighlight">\(2^2\)</span>». Altså «<span class="math notranslate nohighlight">\(-4\)</span>».</p>
+<p>Dette kan også skrives ved hjelp av parenteser:</p>
+<div class="math notranslate nohighlight">
+\[-2^2 = - (2 \cdot 2)\]</div>
+<p>Denne skrivemåten brukes ikke, siden det står akkurat det samme med eller uten parenteser. I matematikken er man opptatt av å skrive så få symboler som mulig. Samtidig er det viktig at vi bruker tilstrekkelig med symboler, slik at det vi skriver blir riktig.</p>
+<p>Parentesene utgjør ofte en stor forskjell:</p>
+<div class="math notranslate nohighlight">
+\[-2^2=-2 \cdot 2= -4 \]</div>
+<div class="math notranslate nohighlight">
+\[(-2)^2=(-2) \cdot (-2)= 4\]</div>
+<div class="section" id="oppgave-3">
+<h2>Oppgave 3<a class="headerlink" href="#oppgave-3" title="Permalink to this headline">¶</a></h2>
+<p>Regn ut <span class="math notranslate nohighlight">\(-3^2\)</span>.</p>
+</div>
+</div>
+<div class="section" id="negative-tall">
+<h1>Negative tall<a class="headerlink" href="#negative-tall" title="Permalink to this headline">¶</a></h1>
+<p>Negative tall. Positive tall. Navnene avslører noe om opprinnelsen. De negative tallene ble ikke godt mottatt da de kom. Negative tall ble brukt både i Kina og India i flere tusen år før de kom til Europa. Her møtte de negative tallene motstand. Det kan skyldes matematikernes utgangspunkt i geometrien. Det vil si at tallene ble sett på som lengder til linjestykker og andre geometriske objekter (som omkrets til en sirkel). Det gav ikke mening å snakke om negative lengder. Rundt 1600-tallet ble de negative tallene gradvis akseptert i Europa.</p>
+<p>Negative tall er greie å ha i alle tilfeller hvor vi skal beskrive noe som er mindre enn null. Det kan være temperaturer, kapital, saldoen på bankkontoen og i mange andre sammenhenger.</p>
+<p>Et negativt tall er et tall som er mindre enn null. Et eksempel er −2.</p>
+<p>Da har vi at <span class="math notranslate nohighlight">\(2+(−2)=0\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(−2\)</span> er det tallet som gjør at summen med tallet 2 blir null. Slik kan vi definere de negative tallene.</p>
+<p>Videoen under gir en innføring i hva negative tall er, hvorfor vi benytter negative tall, og litt om regning med negative tall.</p>
+<div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/289850693?h=96b5a39ee8&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Når vi regner med negative tall kan det oppstå forvirring og reglene kan være vanskelige å forstå.</p>
+<p>Hvorfor blir produktet av et positivt og et negativt tall negativt?</p>
+<p>Videoen under gir en forklaring</p>
+<div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/289850677?h=9c6780c28d&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Hvorfor blir produktet av to negative tall positivt?
+Her er en video som forklarer det.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/310180795?h=c04b6b1441&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="section" id="oppgave-4">
+<h2>Oppgave 4<a class="headerlink" href="#oppgave-4" title="Permalink to this headline">¶</a></h2>
+<p>Regn ut <span class="math notranslate nohighlight">\((1−2)\cdot(3−5)\)</span>.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/448598725?h=a5da98b45a&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Så langt har vi kun sett på to tallmengder, nemlig de naturlige tall <span class="math notranslate nohighlight">\(\mathbb N\)</span> og de hele tall <span class="math notranslate nohighlight">\( \mathbb Z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb N = \{1, 2, 3, 4, \cdots \}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbb Z = \{\cdots, -3, -2, -1, 0, 1, 2, 3, \cdots \}\]</div>
+<p>Men hva skjer når vi dividerer to tall?  Vi kan dividere 8 med 4 og få 2, som er et helt tall. Men dersom vi for eksempel dividerer 1 med 2, blir resultatet ikke et helt tall. Vi får brøken <span class="math notranslate nohighlight">\(\dfrac{1}{2}\)</span>. For å kunne dividere hele tall, må vi på ny utvide tallmengden vår. Vi må inkludere alle tall som består av brøker med hele tall i teller og nevner.</p>
+<p>Tall som kan skrives som brøker med hele tall i teller og nevner, kalles rasjonale tall. Disse symboliseres med <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>.</p>
+<p>Vi kan anvende regneoperasjonene addisjon, subtraksjon, multiplikasjon og divisjon på rasjonale tall og få et rasjonalt tall som resultat.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="matematikk.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Å bli god i matematikk</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
