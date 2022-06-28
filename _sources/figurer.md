@@ -8,7 +8,7 @@ Nedenfor ser du de tre første figurene som er laget av fyrstikker.
 
 ![Bilde av fyrstikker laget som kvadrater](/bilder/fyrstikker.png "Hvor mange fyrstikker er det i figur 50??") 
 
-Hvor mange fyrstikker er det i figur nummer 50?
+Hvor mange fyrstikker er det i figur nummer 50? 
 
 Denne oppgaven vil vi at du skal bruke god tid på. Det er ikke sikkert at du får den til med en gang.  
 
@@ -132,10 +132,9 @@ I forrige oppgave fant vi ut hvor mange fyrstikker det var i figur nummer 50. Ka
 ```{admonition} Klikk på knappen til høyre for å vise løsning!
 :class: dropdown
 
-<p><img src="bilder/fyrstikker2.png" width="300"></p>
+![](/bilder/fyrstikker2.png "Ser du mønsteret") 
 
 Antall fyrstikker i figur nummer $n$ kan vi skrive som:
-
 
 $$F_n=1+3 \cdot n$$
 
@@ -149,3 +148,68 @@ $$F_n=4+3 \cdot (n-1)$$
 For å komme fram til den gjelder samme tankegang, men da starter vi med fire fyrstikker i den første og legger til samlinger med tre fyrstikker fra og med den andre figuren. Begge formlene er naturligvis riktige og ved litt regning kan vi se at de er like.
 
 ```
+
+## Oppgave 2
+
+![](/bilder/trekanttall.PNG)
+
+Figurene over viser noen trekanttall. De har fått navnet sitt etter mønsteret som dannes når vi tegner figurene. Som du ser blir det trekanter!
+
+Her ser du de fire første trekanttallene. Du ser at det første trekanttallet er 1, det andre 3, det tredje 6 og det fjerde 10. 
+
+Hva blir trekanttall nummer 7?
+
+```{admonition} Klikk på knappen til høyre for et hint!
+:class: dropdown
+
+Når du skal jobbe med firgurtall er det to framgangsmåter som kan være lure. Den ene er å se etter mønster direkte i tallene. Legg merke til at det tredje trekanttallet kan skrives som 
+
+$$ 1+2+3$$
+
+ og det fjerde kan skrives som 
+
+$$1+2+3+4$$
+
+Hva blir da det syvende trekanttallet? Den andre framgangsmåten er å se etter mønstre i figurene. Kanskje kan du se akkurat det samme i prikkmønsteret?
+
+```
+Kan du finne en formel for trekanttall nummer $n$? 
+
+```{admonition} Klikk på knappen til høyre for en løsning!
+:class: dropdown
+
+Det som bestemmer et trekanttall, er hvilket nummer det er i rekken. Når du skal lage en variabel for nummer, brukes ofte bokstaven $n$.
+
+Trekanttall nr $n$  kan skrives generelt som 
+
+$$T(n)=\frac{n⋅(n+1)}{2}$$
+```
+
+I filmen nedenfor viser vi hvordan vi kan komme fram til formelen i løsningen ovenfor. 
+
+<div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291449702?h=cb9445762a&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+### Eksempel
+
+I filmen nedenfor viser vi hvordan vi kan regne ut 
+
+$$1+2+3+\cdots +100$$
+
+ ved å bruke et smart triks. 
+
+ <div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291449893?h=4077438629&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+ ## Oppgave 3
+
+ Fra tidligere vet vi at trekanttall nr 
+$n$ kan skrives generelt som 
+
+$$T(n)=\frac{n⋅(n+1)}{2}$$
+
+Tallet 1326 er et trekanttall. Hvilket figurnummer gir dette tallet?
+
+```{admonition} Klikk på knappen til høyre for et hint!
+:class: dropdown
+
+Her må vi prøve oss fram. Se på formelen. Kan du finne et produkt 
+$n\cdot(n+1)$ som blir to ganger 1326 ?
