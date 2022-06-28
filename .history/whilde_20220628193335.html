@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While-løkker &#8212; Matematikk 1T</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Søk" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tallbehandling.html">
+   Tall og tallbehandling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../figurer.html">
+   Figurer og variable størrelser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regne-python.html">
+   Python som kalkulator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Betingelser.html">
+   Programmering med betingelser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/.history/whilde_20220628193335.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-1">
+   Eksempel 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppgave-1">
+   Oppgave 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-2">
+   Eksempel 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-3">
+   Eksempel 3
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>While-løkker</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-1">
+   Eksempel 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppgave-1">
+   Oppgave 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-2">
+   Eksempel 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eksempel-3">
+   Eksempel 3
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="while-lokker">
+<h1>While-løkker<a class="headerlink" href="#while-lokker" title="Permalink til denne oversikten">¶</a></h1>
+<p>Nå skal du lære å bruke while-løkker. Det er løkker der Python gjør ulike beregninger så lenge en betingelse er oppfylt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">sum</span>  <span class="o">=</span> <span class="mi">0</span>
+<span class="n">Så</span> <span class="n">lenge</span> <span class="n">a</span> <span class="n">er</span> <span class="n">mindre</span> <span class="n">enn</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">adder</span> <span class="n">a</span> <span class="n">til</span> <span class="nb">sum</span>
+    <span class="n">øk</span> <span class="n">a</span> <span class="n">med</span> <span class="mi">1</span>
+<span class="n">skriv</span> <span class="n">ut</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+<p>Her ser du at det setter opp en betingelse i tredje linje: så lenge a er mindre enn 10. Siden a i utgangspunktet er 1, så er dette sant. Sum vil derfor få en ny verdi 0+1=1 og a øker til 2. Da er fremdeles a  mindre enn 10, så vi addere a til sum og får sum = 1+2=3 og a blir lik 3. Slik fortsetter vi så lenge a er mindre enn 10. Resultatet blir at sum får verdien sum = 1+2+3+4+5+6+7+8+9 = 45.</p>
+<p><img alt="" src="../_images/everyone.jpg" /></p>
+<p>Vi har tidligere sett på løkker av typen</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+   <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">i</span>
+</pre></div>
+</div>
+<p>I slike løkker gjennomløper tallet «i» alle tallene som er spesifisert av range-kommandoen. En annen type løkke som er nyttig å bruke er såkalte while-løkker. I en while-løkke vil en kode gjentas så lenge en betingelse er sann:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">betingelse</span><span class="p">:</span>
+   <span class="n">kode</span> <span class="n">som</span> <span class="n">kjøres</span> <span class="n">så</span> <span class="n">lenge</span> <span class="n">betingelsen</span> <span class="n">er</span> <span class="n">sann</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="eksempel-1">
+<h2>Eksempel 1<a class="headerlink" href="#eksempel-1" title="Permalink til denne oversikten">¶</a></h2>
+<p>I filmen nedenfor viser vi hvordan vi kan bruke en slik løkke til å printe ut alle kvadrattallene mindre enn 200.</p>
+<div style="padding:56.15% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/435784038?h=9b72504762&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="oppgave-1">
+<h2>Oppgave 1<a class="headerlink" href="#oppgave-1" title="Permalink til denne oversikten">¶</a></h2>
+<p>Bruk Python til å bestemme hvor mange kubikktall som er mindre enn 1000. Husk at kubikktallene er tallene <span class="math notranslate nohighlight">\(1^3, 2^3, 3^3, \ldots\)</span>.</p>
+<p>Du kan lage programmet her:</p>
+<iframe src="https://trinket.io/embed/python3/07fd44e51b" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+<p><strong>Løsning:</strong></p>
+<div style="padding:56.15% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/435795131?h=93a4339a43&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="eksempel-2">
+<h2>Eksempel 2<a class="headerlink" href="#eksempel-2" title="Permalink til denne oversikten">¶</a></h2>
+<p>Anna vil spare penger og skal hvert år sette 1000 kroner inn på en konto med fast rentefot lik 2,0 prosent.</p>
+<p>Hvor mange år vil det gå fra hun setter det første beløpet inn på kontoen til hun har mer enn 30000 kroner på kontoen?</p>
+<div style="padding:56.15% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/435805090?h=20ddd07f26&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="eksempel-3">
+<h2>Eksempel 3<a class="headerlink" href="#eksempel-3" title="Permalink til denne oversikten">¶</a></h2>
+<p>I filmen nedenfor viser vi hvordan vi kan bruke Python til å løse følgende problem:</p>
+<p>Anna skal spare penger på en konto med fast årlig rentefot lik 2,1 %. Hun ønsker at det skal være 200 000 kroner på kontoen like etter at hun setter inn det tiende beløpet. Hvor mye må hun spare hvert år for å oppnå dette?</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
