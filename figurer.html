@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Søk" href="search.html" />
-    <link rel="next" title="Python som kalkulator" href="regne-python.html" />
+    <link rel="next" title="Rasjonale eksponenter" href="n-te-rot.html" />
     <link rel="prev" title="Tall og tallbehandling" href="tallbehandling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="nb">
@@ -121,6 +121,18 @@
    Figurer og variable størrelser
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="n-te-rot.html">
+   Rasjonale eksponenter
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="regne-python.html">
    Python som kalkulator
@@ -213,25 +225,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-1">
-   Oppgave 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-2">
-   Oppgave 2
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eksempel">
-     Eksempel
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-3">
-   Oppgave 3
+  <a class="reference internal nav-link" href="#eksempel">
+   Eksempel
   </a>
  </li>
 </ul>
@@ -260,25 +255,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-1">
-   Oppgave 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-2">
-   Oppgave 2
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eksempel">
-     Eksempel
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-3">
-   Oppgave 3
+  <a class="reference internal nav-link" href="#eksempel">
+   Eksempel
   </a>
  </li>
 </ul>
@@ -411,10 +389,10 @@
 </table>
 <br><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Da kan vi finne antall fyrstikker i figur nummer 50 som: 4+3·49=151</span><br>
 <p>Det fins sikkert flere framgangsmåter som alle er like riktige. Svaret skal uansett bli det samme: 151</p>
-</div>
-<div class="section" id="oppgave-1">
-<h2>Oppgave 1<a class="headerlink" href="#oppgave-1" title="Permalink til denne oversikten">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 1</p>
 <p>I forrige eksempel fant vi ut hvor mange fyrstikker det var i figur nummer 50. Kan du finne et matematisk uttrykk som viser hvor mange fystikker det er i figurnummer <span class="math notranslate nohighlight">\(n\)</span>?</p>
+</div>
 <div class="dropdown admonition">
 <p class="admonition-title">Klikk på knappen til høyre for å vise løsning!</p>
 <p><img alt="" src="_images/fyrstikker2.png" /></p>
@@ -428,13 +406,13 @@ slike samlinger, og så videre. Hver av disse samlingene er markert med et orans
 \[F_n=4+3 \cdot (n-1)\]</div>
 <p>For å komme fram til den gjelder samme tankegang, men da starter vi med fire fyrstikker i den første og legger til samlinger med tre fyrstikker fra og med den andre figuren. Begge formlene er naturligvis riktige og ved litt regning kan vi se at de er like.</p>
 </div>
-</div>
-<div class="section" id="oppgave-2">
-<h2>Oppgave 2<a class="headerlink" href="#oppgave-2" title="Permalink til denne oversikten">¶</a></h2>
 <p><img alt="" src="_images/trekanttall.PNG" /></p>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 2</p>
 <p>Figurene over viser noen trekanttall. De har fått navnet sitt etter mønsteret som dannes når vi tegner figurene. Som du ser blir det trekanter!</p>
 <p>Her ser du de fire første trekanttallene. Du ser at det første trekanttallet er 1, det andre 3, det tredje 6 og det fjerde 10.</p>
 <p>Hva blir trekanttall nummer 7?</p>
+</div>
 <div class="dropdown admonition">
 <p class="admonition-title">Klikk på knappen til høyre for et hint!</p>
 <p>Når du skal jobbe med firgurtall er det to framgangsmåter som kan være lure. Den ene er å se etter mønster direkte i tallene. Legg merke til at det tredje trekanttallet kan skrives som</p>
@@ -455,22 +433,22 @@ slike samlinger, og så videre. Hver av disse samlingene er markert med et orans
 </div>
 <p>I filmen nedenfor viser vi hvordan vi kan komme fram til formelen i løsningen ovenfor.</p>
 <div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291449702?h=cb9445762a&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
 <div class="section" id="eksempel">
-<h3>Eksempel<a class="headerlink" href="#eksempel" title="Permalink til denne oversikten">¶</a></h3>
+<h2>Eksempel<a class="headerlink" href="#eksempel" title="Permalink til denne oversikten">¶</a></h2>
 <p>I filmen nedenfor viser vi hvordan vi kan regne ut</p>
 <div class="math notranslate nohighlight">
 \[1+2+3+\cdots +100\]</div>
 <p>ved å bruke et smart triks.</p>
  <div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291449893?h=4077438629&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-</div>
-</div>
-<div class="section" id="oppgave-3">
-<h2>Oppgave 3<a class="headerlink" href="#oppgave-3" title="Permalink til denne oversikten">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 3</p>
 <p>Fra tidligere vet vi at trekanttall nr
 <span class="math notranslate nohighlight">\(n\)</span> kan skrives generelt som</p>
 <div class="math notranslate nohighlight">
 \[T(n)=\frac{n⋅(n+1)}{2}\]</div>
 <p>Tallet 1326 er et trekanttall. Hvilket figurnummer gir dette tallet?</p>
+</div>
 <div class="dropdown admonition">
 <p class="admonition-title">Klikk på knappen til høyre for et hint!</p>
 <p>Her må vi prøve oss fram. Se på formelen. Kan du finne et produkt
@@ -511,10 +489,10 @@ slike samlinger, og så videre. Hver av disse samlingene er markert med et orans
             <p class="prev-next-title">Tall og tallbehandling</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="regne-python.html" title="neste page">
+    <a class='right-next' id="next-link" href="n-te-rot.html" title="neste page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">neste</p>
-        <p class="prev-next-title">Python som kalkulator</p>
+        <p class="prev-next-title">Rasjonale eksponenter</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

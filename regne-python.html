@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Søk" href="search.html" />
     <link rel="next" title="Programmering med betingelser" href="Betingelser.html" />
-    <link rel="prev" title="Figurer og variable størrelser" href="figurer.html" />
+    <link rel="prev" title="Rasjonale eksponenter" href="n-te-rot.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="nb">
     
@@ -110,7 +110,7 @@
   Algebra
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="tallbehandling.html">
    Tall og tallbehandling
@@ -121,6 +121,18 @@
    Figurer og variable størrelser
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="n-te-rot.html">
+   Rasjonale eksponenter
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Python som kalkulator
@@ -213,11 +225,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-1">
-   Oppgave 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-be-brukeren-om-input">
    Å be brukeren om input
   </a>
@@ -230,16 +237,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-regner-ut-en-sum-i-python">
    Vi regner ut en sum i Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-2">
-   Oppgave 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-3">
-   Oppgave 3
   </a>
  </li>
 </ul>
@@ -268,11 +265,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-1">
-   Oppgave 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-be-brukeren-om-input">
    Å be brukeren om input
   </a>
@@ -285,16 +277,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-regner-ut-en-sum-i-python">
    Vi regner ut en sum i Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-2">
-   Oppgave 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#oppgave-3">
-   Oppgave 3
   </a>
  </li>
 </ul>
@@ -334,14 +316,14 @@
 <p>når <span class="math notranslate nohighlight">\(v = 10\)</span>, <span class="math notranslate nohighlight">\(t=1.5\)</span> og <span class="math notranslate nohighlight">\(a = -9.81\)</span>.</p>
 <div style="padding:56.31% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394405430?title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe></div>
 <script src="https://player.vimeo.com/api/player.js"></script>
-</div>
-<div class="section" id="oppgave-1">
-<h2>Oppgave 1<a class="headerlink" href="#oppgave-1" title="Permalink til denne oversikten">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 1</p>
 <p>Formelen for arealet (A) til et trapes er gitt formelen</p>
 <div class="math notranslate nohighlight">
 \[ A = \dfrac{a+b}{2}\cdot h \]</div>
 <img alt="Et trapes" src="bilder/trapes.png" width=300pt>
 <p>Lag et program som regner ut arealet til trapeset når <span class="math notranslate nohighlight">\(a = 4.3\)</span>, <span class="math notranslate nohighlight">\(b = 3.2\)</span> og <span class="math notranslate nohighlight">\(h = 2.0\)</span>.</p>
+</div>
 <iframe src="https://trinket.io/embed/python3/a973537f95" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
 </div>
 <div class="section" id="a-be-brukeren-om-input">
@@ -447,20 +429,20 @@
 </div>
 <p>Kommandoen range(1, 101) gir oss altså tallene 1, 2, 3, …, 100. Her har vi også brukt innrykk i linjen der det står s = s + i**2. Dette må vi gjøre for å fortelle programmet hva som skal være med i løkken vi lager. Siden print(s) ikke har et innrykk, så skal ikke s printes ut i hvert steg i løkken.</p>
 <div style="padding:56.31% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394422844?h=78cfd3e533&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-</div>
-<div class="section" id="oppgave-2">
-<h2>Oppgave 2<a class="headerlink" href="#oppgave-2" title="Permalink til denne oversikten">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 2</p>
 <p>Se om du kan lage et program som regner ut summen</p>
 <div class="math notranslate nohighlight">
 \[ 1^2+2^2+3^2 +\cdots + 99^2 + 100^2\]</div>
+</div>
 <iframe src="https://trinket.io/embed/python3/9f43d63965" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
 <p>I filmen nedenfor ser du en løsning av oppgaven på ovenfor.</p>
 <div style="padding:56.31% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/394432647?h=6fd00d9431&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-</div>
-<div class="section" id="oppgave-3">
-<h2>Oppgave 3<a class="headerlink" href="#oppgave-3" title="Permalink til denne oversikten">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Oppgave 3</p>
 <p>Lag et program som ber brukeren om et helt tall <span class="math notranslate nohighlight">\(n\)</span> og som deretter regner ut summen av de <span class="math notranslate nohighlight">\(n\)</span> første oddetallene.</p>
 <p>Du kan starte programmet ved å skrive n = int(input(«Skriv inn et naturlig tall:» )</p>
+</div>
 <iframe src="https://trinket.io/embed/python3/f6a79ae9bd" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe></div>
 </div>
 
@@ -489,11 +471,11 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="figurer.html" title="forrige page">
+    <a class='left-prev' id="prev-link" href="n-te-rot.html" title="forrige page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">forrige</p>
-            <p class="prev-next-title">Figurer og variable størrelser</p>
+            <p class="prev-next-title">Rasjonale eksponenter</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Betingelser.html" title="neste page">
