@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduksjon til likninger &#8212; Matematikk 1T</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Søk" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tallbehandling.html">
+   Tall og tallbehandling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../figurer.html">
+   Figurer og variable størrelser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../potenser.html">
+   Potenser
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regne-python.html">
+   Python som kalkulator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Betingelser.html">
+   Programmering med betingelser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../while.html">
+   While-løkker
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../likninger.html">
+   Introduksjon til likninger
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/.history/likninger_20220705152103.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduksjon til likninger
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hva-er-en-likning">
+     Hva er en likning?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prove-og-feile-metoden">
+     Prøve-og-feile-metoden
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomlikninger">
+     Polynomlikninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-om-du-kan-lagetre-likninger-som-har-x">
+   Se om du kan lagetre likninger som har
+$x
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduksjon til likninger</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduksjon til likninger
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hva-er-en-likning">
+     Hva er en likning?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prove-og-feile-metoden">
+     Prøve-og-feile-metoden
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#polynomlikninger">
+     Polynomlikninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-om-du-kan-lagetre-likninger-som-har-x">
+   Se om du kan lagetre likninger som har
+$x
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduksjon-til-likninger">
+<h1>Introduksjon til likninger<a class="headerlink" href="#introduksjon-til-likninger" title="Permalink til denne oversikten">¶</a></h1>
+<p>Nå ønsker vi at du skal få en god forståelse hva en likning er, og hva det betyr at for eksempel <span class="math notranslate nohighlight">\(x=4\)</span> er en løsning av en likning.</p>
+<p>Du skal også lære å løse en del likninger ved ulike metoder. Du skal i første omgang konsentrere deg om lineære likninger. Det er likninger av typen</p>
+<div class="math notranslate nohighlight">
+\[ 2x-3=4-5x\]</div>
+<p>I løpet av 1T skal du kunne løse disse ved</p>
+<ul class="simple">
+<li><p>prøve-og-feile-metoden</p></li>
+<li><p>generell metode</p></li>
+<li><p>grafisk løsning</p></li>
+<li><p>løsning ved hjelp av digitale verktøy</p></li>
+</ul>
+<p>Prøve-og-feile-metoden og generell metode skal du jobbe med i denne leksjonen. Grafisk løsning skal du se på når du kommer til Funksjoner og løsning ved hjelp av digitale verktøy kommer neste gang.</p>
+<p>Det kan godt være at du kan mye av det du møter i denne leksjonen fra før. Likevel vil vi at du jobber deg gjennom leksjonen slik at du om mulig får en enda dypere forståelse av dette temaet.</p>
+<p><img alt="" src="../_images/tavle.png" /></p>
+<div class="section" id="hva-er-en-likning">
+<h2>Hva er en likning?<a class="headerlink" href="#hva-er-en-likning" title="Permalink til denne oversikten">¶</a></h2>
+<p>I videoen nedenfor vil du lære hva en likning er og hva det vil si at en bestemt x-verdi er en løsning til en likning.</p>
+<div style="padding:56.6% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/291454845?h=ff5c399adc&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>I videoen ovenfor så du at i en likning er det to uttrykk som skal være like. Som oftest er høyre- og venstresiden to uttrykk i x. Når du skal løse likninger, søker du de x-ene som gjør at venstresiden og høyresiden av likhetstegnet blir like.</p>
+<p>I videoen så du på likningen</p>
+<div class="math notranslate nohighlight">
+\[ 2x^2+x=12-x\]</div>
+<p>Denne likningen har to løsninger: <span class="math notranslate nohighlight">\( x= 2\)</span> og <span class="math notranslate nohighlight">\(x=-3\)</span>.</p>
+<p>Man ser for eksempel at <span class="math notranslate nohighlight">\(x=-3\)</span> er en løsning fordi</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Venstresiden<span class="math notranslate nohighlight">\(=  2\cdot (-3)^2+(-3)=2\cdot 9-3=15\)</span></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Høyresiden <span class="math notranslate nohighlight">\( =12-(-3)=15 \)</span></p></li>
+</ul>
+<p>Siden venstresiden og høyresiden er like når <span class="math notranslate nohighlight">\(x=-3\)</span>, så betyr det at <span class="math notranslate nohighlight">\(x=-3\)</span> er en løsning til likningen</p>
+<p>Kan du vise at også  <span class="math notranslate nohighlight">\(x=2\)</span> er en løsning?</p>
+</div>
+<div class="section" id="prove-og-feile-metoden">
+<h2>Prøve-og-feile-metoden<a class="headerlink" href="#prove-og-feile-metoden" title="Permalink til denne oversikten">¶</a></h2>
+<p>Denne metoden går ut på å prøve med ulike verdier for den ukjente og se om du kan finne en løsning som passer.</p>
+<p>Eksempel</p>
+<p>Finn en <span class="math notranslate nohighlight">\(x\)</span> som gjør følgende likning sann:</p>
+<div class="math notranslate nohighlight">
+\[ 2x-2=10-4x\]</div>
+<p>Når du skal bruke prøve-og-feile-metoden, setter du inn ulike verdier for <span class="math notranslate nohighlight">\(x\)</span> på høyre- og venstresiden av likningen og ser hvilken som gjør de to sidene like store.</p>
+<p><span class="math notranslate nohighlight">\( x=1\)</span> gir  V.S. <span class="math notranslate nohighlight">\(=2\cdot 1-2=0\)</span>  og  H.S. <span class="math notranslate nohighlight">\(= 10-4\cdot 1=6\)</span> <span class="math notranslate nohighlight">\(\to\)</span> V.S. ≠ H.S <span class="math notranslate nohighlight">\(\to x≠1\)</span></p>
+<p><span class="math notranslate nohighlight">\(x=2\)</span> gir V.S. <span class="math notranslate nohighlight">\(=2\cdot 2-2=2\)</span> og H.S. <span class="math notranslate nohighlight">\(=10-4\cdot 2=2\)</span> <span class="math notranslate nohighlight">\(\to\)</span> V.S = H.S <span class="math notranslate nohighlight">\(\to x=2\)</span></p>
+<p>Over ser du at <span class="math notranslate nohighlight">\( x=1\)</span> ikke er en løsning, mens <span class="math notranslate nohighlight">\(x=2\)</span>  er en løsning.</p>
+<blockquote>
+<div><p>Vi skriver H.S. for høyre side og V.S. for venstre side av en likning.</p>
+</div></blockquote>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1 </p>
+<p>Hvilke av likningenene under har
+<span class="math notranslate nohighlight">\(x=3\)</span> som en løsning?</p>
+<p>a) <span class="math notranslate nohighlight">\(2x−1=5\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(4x-8=10-6x\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(4x+0=24-x≠1\)</span></p>
+<p>d) <span class="math notranslate nohighlight">\(4+x = 4-x\)</span></p>
+<p>e) <span class="math notranslate nohighlight">\(4+3x=2x-4\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Klikk på knappen til høyre fasit!</p>
+<p>Riktige svar er a) og c).</p>
+</div>
+</div>
+<div class="section" id="polynomlikninger">
+<h2>Polynomlikninger<a class="headerlink" href="#polynomlikninger" title="Permalink til denne oversikten">¶</a></h2>
+<p>Det fins flere typer likninger som du skal lære å løse. De enkleste er de som vi kaller for lineære. En lineære likning er en likning der høyeste potens av <span class="math notranslate nohighlight">\(x\)</span> er 1. Her er et eksempel:</p>
+<div class="math notranslate nohighlight">
+\[ 2x-3=4^2-x\]</div>
+<p>Selv om det står <span class="math notranslate nohighlight">\(4^2\)</span> på høyresiden av denne likningen, så er dette likevel en lineær likning. Det er fordi hvert ledd som inneholder <span class="math notranslate nohighlight">\(x\)</span> kun er i  førstepotens.</p>
+<p>På samme måte er en andregradslikning en likning som er satt sammen av ulike ledd på hver side av likhetstegnet der høyeste potens av <span class="math notranslate nohighlight">\(x\)</span> er <span class="math notranslate nohighlight">\(x^2\)</span>. Her er et eksempel på en slik likning:</p>
+<div class="math notranslate nohighlight">
+\[ x-2x^2=4+x^2\]</div>
+<p>På samme måte finnes tredjegradslikninger, fjerdegradslikninger etc. Likningen nedenfor er en femtegradslikning.</p>
+<div class="math notranslate nohighlight">
+\[ 1-x=x^5+x^4\]</div>
+<p>Den siste likningen skal du slippe å løse med «papir og blyant».</p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 2</p>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="se-om-du-kan-lagetre-likninger-som-har-x">
+<h1>Se om du kan lagetre likninger som har
+$x<a class="headerlink" href="#se-om-du-kan-lagetre-likninger-som-har-x" title="Permalink til denne oversikten">¶</a></h1>
+<p>4
+som en løsning.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
