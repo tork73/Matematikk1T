@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lineære funksjoner &#8212; Matematikk 1T</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Søk" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../prorammering-inntro.html">
+   introduksjon til programmering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../regne-python.html">
+     Python som kalkulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Betingelser.html">
+     Programmering med betingelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../while.html">
+     While-løkker
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../algebra-inntro.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tallbehandling.html">
+     Tall og tallbehandling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../figurer.html">
+     Figurer og variable størrelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../potenser.html">
+     Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../likninger.html">
+     Introduksjon til likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../likningssystem.html">
+     Lineære likningssystem med og uten digitale verktøy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../likninger-praksis.html">
+     Likninger i praksis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formelregning.html">
+     Å regne med Formler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../faktorisering-kvadratsetninger.html">
+     Faktorisering og kvadratsetninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../faktorisering-vha-kvadratsetningen.html">
+     Faktorisering ved hjelp av kvadratsetningene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../enkle-kvadratiske-likninger.html">
+     Enkle kvadratiske likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fullstendige-kvadrat-likning.html">
+     Fullstendige kvadrat og likningsløsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../faktorisering-rasjonale.html">
+     Faktorisering av  rasjonale uttrykk
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../funksjoner-inntro.html">
+   Funksjoner
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../hva-er-en-funksjon.html">
+     Hva er en funksjon?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lineaere.html">
+     Lineære funksjoner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/.history/lineaere_20220706195319.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-en-linaer-funksjon">
+   Hva er en linær funksjon?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tegning-av-grafen-til-en-lineaer-funksjon">
+   Tegning av grafen til en lineær funksjon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaere-funksjoner-og-ulikheter">
+   Lineære funksjoner og ulikheter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#betydningen-av-a-og-b">
+   Betydningen av a og b
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stigningstallet-til-en-lineaer-funksjon">
+     Stigningstallet til en lineær funksjon
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lineære funksjoner</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-en-linaer-funksjon">
+   Hva er en linær funksjon?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tegning-av-grafen-til-en-lineaer-funksjon">
+   Tegning av grafen til en lineær funksjon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lineaere-funksjoner-og-ulikheter">
+   Lineære funksjoner og ulikheter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#betydningen-av-a-og-b">
+   Betydningen av a og b
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stigningstallet-til-en-lineaer-funksjon">
+     Stigningstallet til en lineær funksjon
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lineaere-funksjoner">
+<h1>Lineære funksjoner<a class="headerlink" href="#lineaere-funksjoner" title="Permalink til denne oversikten">¶</a></h1>
+<p>Her skal du lære om egenskapene til de lineære funksjonene. Du skal kunne finne en funksjon som beskriver en situasjon tegne grafen til en lineær funksjon løse ulikheter og likninger hvor lineære funksjoner inngår.</p>
+<p>Du skal også kunne tolke tallene <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> i funksjonsuttrykket $<span class="math notranslate nohighlight">\(f(x)=ax+b\)</span>$</p>
+<p>Disse tallene kan tolkes geometrisk og du skal kunne bruke dette til å bestemme funksjonsuttrykket til en lineær funksjon når du kjenner to punkt på grafen.</p>
+<p><img alt="" src="../_images/tram.png" /></p>
+<div class="section" id="hva-er-en-linaer-funksjon">
+<h2>Hva er en linær funksjon?<a class="headerlink" href="#hva-er-en-linaer-funksjon" title="Permalink til denne oversikten">¶</a></h2>
+<p>I videoen skal du få se hva en lineær funksjon er. Vi viser deg også et eksempel der en slik funksjon dukker opp.</p>
+ <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/339092917?h=6eda13c695&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="note admonition">
+<p class="admonition-title">Oppgave  1</p>
+<p>I eksempelet med mobilabonnement var månedsprisen <span class="math notranslate nohighlight">\(f(x)=0,39x+40\)</span> dersom du sendte <span class="math notranslate nohighlight">\(x\)</span> tekstmeldinger.</p>
+<p>Hvor mange tekstmeldinger kan du sende for 150 kroner?</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Merk at denne oppgaven ble laget før bensinprisene økte kraftig.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 2</p>
+<p>Stig er nesten tom for bensin og stopper ved bensinstasjonen. I tillegg til å fylle bensin kjøper han et ukeblad for 80 kroner. Bensinprisen er 15 kroner per liter. Hva er sammenhengen mellom antall liter Stig fyller og prisen han må betale på bensinstasjonen? Her kan vi la x være antall liter Stig fyller på tanken. Da må han betale <span class="math notranslate nohighlight">\(f(x)=15x+80\)</span> kroner. Vi kan illustrere dette grafisk slik:</p>
+  <iframe scrolling="no" title="Hvor mye må stig betale?" src="https://www.geogebra.org/material/iframe/id/HWyKraSN/width/621/height/504/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false"
+        width="621px" height="504px" style="border:0px;"> </iframe>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 3</p>
+<p>Line jobber som telefonselger. Hun har en grunnlønn på 110 kroner timen. I tillegg får hun 12 kroner for hvert salg hun oppnår.</p>
+<p>Lag en funksjon <span class="math notranslate nohighlight">\(f(x)\)</span> som gir Lines timelønn dersom hun oppnår <span class="math notranslate nohighlight">\(x \)</span> salg i timen.
+Velg det rette alternativet under.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Fasit</p>
+<p><span class="math notranslate nohighlight">\( f(x)=12x+110\)</span></p>
+</div>
+</div>
+<div class="section" id="tegning-av-grafen-til-en-lineaer-funksjon">
+<h2>Tegning av grafen til en lineær funksjon<a class="headerlink" href="#tegning-av-grafen-til-en-lineaer-funksjon" title="Permalink til denne oversikten">¶</a></h2>
+<p>I videoen nedenfor viser vi hvordan du kan plotte grafen til en lineær funksjon uten å bruke digitale hjelpemidler.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/320947729?h=a8952778af&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 4 </p>
+<p>Nå vil vi at du skal bruke papir og blyant og tegne grafene til funksjonene nedenfor i et koordinatsystem.</p>
+<p>a) <span class="math notranslate nohighlight">\(f(X)=2x-4\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(g(x)= x+1\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(h(x)=-0.5x+2\)</span></p>
+</div>
+</div>
+<div class="section" id="lineaere-funksjoner-og-ulikheter">
+<h2>Lineære funksjoner og ulikheter<a class="headerlink" href="#lineaere-funksjoner-og-ulikheter" title="Permalink til denne oversikten">¶</a></h2>
+<p>I videoen nedenfor viser vi hvordan du grafisk og ved regning kan løse en lineær ulikhet.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/339094501?h=0a10aa2e1e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 5</p>
+<p>I forrige film så vi at utgiftene til kaffimaskin 1 kunne beskrives ved funksjonen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=700+3,12x\]</div>
+<p>Kaffimaskin 2 kunne beskrives ved</p>
+<div class="math notranslate nohighlight">
+\[g(x)=9000 +1,27x\]</div>
+<p>En annen kaffimaskin 3 koster 1500 kroner å kjøpe. I tillegg koster det 2,71 kroner per kopp.</p>
+<p>Bestem antall kopper du kan lage med kaffimaskin 3 for at denne skal være det rimeligste alternativet.</p>
+</div>
+<p>I videoen nedenfor ser vi på hva som skjer dersom vi må dele eller gange med et negativt tall.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/339095159?h=9b4ca39b56&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Før vi går videre vil vi gi deg en liten utfordring. Dra i glideren nedenfor og se hva som skjer. Hvor ble det av det ene kvadratet?</p>
+<iframe src="https://www.geogebratube.org/material/iframe/id/sjmfutbj/width/597/height/319/border/888888/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/preferhtml5" style="border: 0px;" scrolling="no" height="319px" width="597px"> </iframe>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 6</p>
+<p>Nedenfor ser du grafen til en funksjon <span class="math notranslate nohighlight">\(f\)</span>.  Vi vet at siden grafen er en linje, er <span class="math notranslate nohighlight">\(f\)</span> en lineær funksjon. Det vil si at <span class="math notranslate nohighlight">\(f(x)=ax+b\)</span> for passe tall <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p><img alt="" src="../_images/lingraf.png" /></p>
+<p>Se om du ut fra grafen klarer å bestemme <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span>. Forklar hvordan du gikk fram for å bestemme tallene.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 7</p>
+<p>Hva skjer med grafen til en funksjon <span class="math notranslate nohighlight">\(g(x)=ax+ b\)</span> dersom</p>
+<p>Vi endrer <span class="math notranslate nohighlight">\(b\)</span> fra <span class="math notranslate nohighlight">\(b=-2\)</span> til <span class="math notranslate nohighlight">\(b=3\)</span>?
+Vi endrer <span class="math notranslate nohighlight">\(a\)</span> fra <span class="math notranslate nohighlight">\( a=1\)</span> til <span class="math notranslate nohighlight">\( a=2\)</span>?</p>
+</div>
+</div>
+<div class="section" id="betydningen-av-a-og-b">
+<h2>Betydningen av a og b<a class="headerlink" href="#betydningen-av-a-og-b" title="Permalink til denne oversikten">¶</a></h2>
+<p>På forrige side ble du utfordret til å si noe om hvordan en endring i tallene <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> endrer grafen til <span class="math notranslate nohighlight">\(g(x)=ax+b\)</span>.</p>
+<p>På appleten nedenfor kan du endre på <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> og se hva som skjer.</p>
+<iframe src="https://www.geogebratube.org/material/iframe/id/q2hfnuxd/width/724/height/448/border/006BA6/rc/false/ai/false/sdz/false/smb/false/stb/false/stbh/true/ld/false/sri/false/at/preferhtml5" style="border: 0px;" height="448px" scrolling="no" width="724px"> </iframe>
+<div class="section" id="stigningstallet-til-en-lineaer-funksjon">
+<h3>Stigningstallet til en lineær funksjon<a class="headerlink" href="#stigningstallet-til-en-lineaer-funksjon" title="Permalink til denne oversikten">¶</a></h3>
+<p>Til nå har du sett at tallet <span class="math notranslate nohighlight">\(b\)</span> forteller hvor grafen til <span class="math notranslate nohighlight">\(f(x)=ax+b\)</span> skjærer <span class="math notranslate nohighlight">\(y\)</span>-aksen. Du har sikkert også oppdaget at tallet <span class="math notranslate nohighlight">\(a\)</span> har noe med hvor bratt grafen er.</p>
+<p>I videoen nedenfor skal du komme fram til en fin tolkning av dette tallet <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/339096411?h=a15d8a5334&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>I videoen på ovenfore så du at <span class="math notranslate nohighlight">\(a\)</span> er stigningstallet til funksjonen <span class="math notranslate nohighlight">\(f(x)=ax+b\)</span>. Det vil si at dersom man går 1 enhet mot høyre, så går man <span class="math notranslate nohighlight">\(a\)</span> enheter opp (eventuelt ned dersom <span class="math notranslate nohighlight">\(a&lt;0\)</span>).</p>
+<p>I videoen nedenfor vil du se hvordan du kan bestemme stigningstallet dersom du kjenner to punkt på grafen til <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/339097154?h=6f52dd9848&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 8</p>
+<p>Hvilke funksjoner ser du grafene til på figurene nedenfor?</p>
+<p><img alt="" src="../_images/linearefunksjoner.png" /></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

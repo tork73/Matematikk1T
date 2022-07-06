@@ -1,0 +1,2 @@
+# Lineære funksjoner
+
