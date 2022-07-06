@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Å regne med Formler &#8212; Matematikk 1T</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Søk" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tallbehandling.html">
+   Tall og tallbehandling
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../regne-python.html">
+   Python som kalkulator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Betingelser.html">
+   Programmering med betingelser
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../while.html">
+   While-løkker
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../likninger.html">
+   Introduksjon til likninger
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../likningssystem.html">
+   Lineære likningssystem med og uten digitale verktøy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../likninger-praksis.html">
+   Likninger i praksis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../formelregning.html">
+   Å regne med Formler
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Faktorisering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faktorisering-kvadratsetninger.html">
+   Faktorisering og kvadratsetninger
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/.history/formelregning_20220706125147.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametre">
+   Parametre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-storrelser">
+   Variable størrelser
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konstanter">
+   Konstanter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ukjente">
+   Ukjente
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametere">
+     Parametere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-snu-pa-formler">
+   Å «snu» på formler
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Å regne med Formler</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parametre">
+   Parametre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-storrelser">
+   Variable størrelser
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#konstanter">
+   Konstanter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ukjente">
+   Ukjente
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametere">
+     Parametere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-snu-pa-formler">
+   Å «snu» på formler
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="a-regne-med-formler">
+<h1>Å regne med Formler<a class="headerlink" href="#a-regne-med-formler" title="Permalink til denne oversikten">¶</a></h1>
+<p>Nå skal du lære å arbeide med formler. Mens en likning er en likhet som kan være sann for noen ukjente (<span class="math notranslate nohighlight">\(x\)</span> eller andre ukjente størrelser), så er en formel en likhet som uttrykker noe som gjelder uansett hva den ukjente er.</p>
+<p>Her er noen eksempler på formler:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(O=2\pi\cdot r \qquad \)</span>  <span class="math notranslate nohighlight">\( A = \pi r^2\qquad \)</span>  <span class="math notranslate nohighlight">\( s=v\cdot t \qquad \)</span> <span class="math notranslate nohighlight">\( a^n \cdot a^m = a^{n+m}\)</span></p>
+</div></blockquote>
+<p>Målet er at du skal lære å</p>
+<ul class="simple">
+<li><p>bruke formlene til å regne ut ulike størrelser</p></li>
+<li><p>«snu» på formlene</p></li>
+</ul>
+<div class="section" id="parametre">
+<h2>Parametre<a class="headerlink" href="#parametre" title="Permalink til denne oversikten">¶</a></h2>
+<p>Hvordan ville du gå fram om jeg ba deg løse likningen nedenfor?</p>
+<div class="math notranslate nohighlight">
+\[ax+b=d\]</div>
+<p>Jeg tipper du ville fått <span class="math notranslate nohighlight">\( x=\dfrac{d-b}{a}\)</span> som svar. Bak dette svaret ligger en lang tradisjon som går helt tilbake til den franske matematikeren og filosofen René Descartes  (1596 - 1650). Når du ser slike likninger, så tenker du at x-en og de andre bokstavene spiller ulike roller. Vi kaller a, b og d for parametre. Mens x-en i en likning står for et tall som vi ønsker å finne, så representerer <span class="math notranslate nohighlight">\(a, b\)</span> og <span class="math notranslate nohighlight">\(d\)</span> variable størrelser som kan ha mange ulike verdier.</p>
+<p>Vi bruker bokstaver på forskjellige måter i matematikken. Du vil møte ord som variabel, konstant, ukjent og parameter.</p>
+</div>
+<div class="section" id="variable-storrelser">
+<h2>Variable størrelser<a class="headerlink" href="#variable-storrelser" title="Permalink til denne oversikten">¶</a></h2>
+<p>I stedet for å gi konkrete talleksempler, så skriver vi formlene våre med bokstaver. På den måten kan vi bruke formlene for flere tall. I leksjonen om potenser generaliserte vi ved å skrive potensreglene med slike bokstaver. Alle slike bokstaver er det vi kaller for variable størrelser.</p>
+</div>
+<div class="section" id="konstanter">
+<h2>Konstanter<a class="headerlink" href="#konstanter" title="Permalink til denne oversikten">¶</a></h2>
+<p>Mens bokstaver som oftest står for variable størrelser, så er det et unntak vi må presisere. Av og til bruker vi bokstaver til å representere gitte faste tall. I formelen</p>
+<div class="math notranslate nohighlight">
+\[ A = \pi r^2\]</div>
+<p>er det kun <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\( r\)</span> som er variable størrelser. Den greske bokstaven <span class="math notranslate nohighlight">\(\pi\)</span> representerer et bestemt tall, nemlig tallet <span class="math notranslate nohighlight">\( 3,14159265359...\)</span></p>
+</div>
+<div class="section" id="ukjente">
+<h2>Ukjente<a class="headerlink" href="#ukjente" title="Permalink til denne oversikten">¶</a></h2>
+<p>Når du løser en likning, så søker du å bestemme ett eller flere tall <span class="math notranslate nohighlight">\(x\)</span> som passer inn i en likning. Den ukjente <span class="math notranslate nohighlight">\(x\)</span>-en kan med andre ord ikke velges fritt blant alle tall. Den er kun visse tall som passer!</p>
+<div class="section" id="parametere">
+<h3>Parametere<a class="headerlink" href="#parametere" title="Permalink til denne oversikten">¶</a></h3>
+<p>I likningen <span class="math notranslate nohighlight">\(ax+b=c\)</span> står <span class="math notranslate nohighlight">\(x\)</span> for en ukjent, mens <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> og <span class="math notranslate nohighlight">\(c\)</span> er variable størrelser. Du kan bruke slike parametre når du skal generalisere.</p>
+<blockquote>
+<div><p><strong>Eksempel</strong></p>
+<p>Alle lineære funksjoner kan skrives på formen <span class="math notranslate nohighlight">\( y=ax+b\)</span></p>
+<p>Her er <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> generelle tall, mens <span class="math notranslate nohighlight">\(x\)</span>-en kan velges fritt blant de reelle tall.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="a-snu-pa-formler">
+<h2>Å «snu» på formler<a class="headerlink" href="#a-snu-pa-formler" title="Permalink til denne oversikten">¶</a></h2>
+<p><img alt="" src="../_images/rektangelareal.png" /></p>
+<p>Formelen for arealet av et rektangel er gitt ved</p>
+<div class="math notranslate nohighlight">
+\[ A= g\cdot h\]</div>
+<p>Du kan snu på denne formelen ved å løse den som en likning med for eksempel <span class="math notranslate nohighlight">\(h\)</span> som den ukjente. Du får da:</p>
+<div class="math notranslate nohighlight">
+\[ A=g\cdot h\]</div>
+<div class="math notranslate nohighlight">
+\[\frac A g = \frac{g\cdot h}{g} = h\]</div>
+<p>Du har altså funnet en formel for <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ h=\frac A g \]</div>
+<p><strong>Eksempel: Fahrenheit og Celcius</strong></p>
+<p><img alt="" src="../_images/Thermometer_CF.png" /></p>
+<p>I USA er det vanlig å måle temperatur i grader fahrenheit. Dersom det er <span class="math notranslate nohighlight">\(21^\circ\)</span>C, så er det <span class="math notranslate nohighlight">\(70^\circ\)</span> F.</p>
+<p>Vi har en formel for sammenhengen mellom grader fahrenheit og grader celsius:</p>
+<div class="math notranslate nohighlight">
+\[ F=\frac 9 5 \cdot C +32\]</div>
+<p>Setter du  inn C=21 i formelen over, får du</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac 9 5 \cdot 21 +32 = 70\]</div>
+<p>Hvis du ønsker å finne hvor mange grader celsius det er når du vet at det er <span class="math notranslate nohighlight">\(90^\circ\)</span>F, så kan du løse likningen</p>
+<div class="math notranslate nohighlight">
+\[ 90 = \frac 9 5 \cdot C +32\]</div>
+<p>Løser du denne likningen, vil du få at <span class="math notranslate nohighlight">\(C=32\)</span> .</p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>I stedet for å løse slike likninger hver gang du ønsker å finne temperaturen i grader celcius, kan du finne en generell formel for grader celcisu <span class="math notranslate nohighlight">\(C\)</span> ved å snu på formelen <span class="math notranslate nohighlight">\(F=\frac 9 5 \cdot C +32\)</span>.</p>
+<p>Finn en formel for <span class="math notranslate nohighlight">\(C\)</span> uttrykt ved hjelp av <span class="math notranslate nohighlight">\(F\)</span>.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Løsningsforslag</p>
+<p>Trekker du fra 32 på hver side får du $<span class="math notranslate nohighlight">\( F -32=\frac{9}{ 5} \cdot C \)</span><span class="math notranslate nohighlight">\(
+Ved å multiplisere begge sider med \)</span> \dfrac{5}{9}<span class="math notranslate nohighlight">\( får du svaret, siden
+\)</span><span class="math notranslate nohighlight">\( (F-32) \cdot  \frac{5}{9} = \frac{9}{5} \cdot C \cdot \frac{5}{9}\)</span><span class="math notranslate nohighlight">\(
+er lik 
+\)</span><span class="math notranslate nohighlight">\( \dfrac{5\cdot F-160}{9} = C\)</span>$</p>
+<p>Eller om du vil:</p>
+<div class="math notranslate nohighlight">
+\[ C=\dfrac{5\cdot F-160}{9}\]</div>
+</div>
+<br>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 2 (Eksamen Høsten 2021)</p>
+<p><img alt="" src="../_images/pendel.PNG" /></p>
+<p>Ovenfor ser du en pendel. Pendelen er en kule som henger i en snor med lengde L meter. Tiden T sekunder som det tar for pendelen å bevege seg én gang fram og tilbake, kalles svingetiden. Svingetiden er avhengig av snorens lengde. Sammenhengen er gitt ved formelen</p>
+<div class="math notranslate nohighlight">
+\[ T = 2 \pi \sqrt{\frac{L}{g}}\]</div>
+<p>Her er <span class="math notranslate nohighlight">\(g \approx 9,81\)</span>.</p>
+<p>Gjør om på formelen ovenfor slik at du får en formel for L uttrykt ved T.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

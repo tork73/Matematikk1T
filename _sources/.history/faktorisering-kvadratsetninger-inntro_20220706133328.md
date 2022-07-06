@@ -1,0 +1,1 @@
+# Faktorisering og kva

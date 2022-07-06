@@ -1,0 +1,2 @@
+# Faktorisering og kvadratsetninger
+
