@@ -1,0 +1,1 @@
+# fullstendige kvadrat og liknings

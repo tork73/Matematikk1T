@@ -1,0 +1,1 @@
+# Fullstendige kvadrat og likningsløsning

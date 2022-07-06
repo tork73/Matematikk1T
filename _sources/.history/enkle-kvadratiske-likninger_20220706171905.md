@@ -1,0 +1,1 @@
+# Enkle kvadratiske likninger
