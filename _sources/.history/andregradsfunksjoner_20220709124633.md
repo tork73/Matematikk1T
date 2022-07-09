@@ -1,0 +1,2 @@
+# Andregradsfunksjoner og grafene deres
+
