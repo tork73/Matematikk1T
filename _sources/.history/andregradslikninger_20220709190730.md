@@ -1,0 +1,2 @@
+# Andregradslikninger: en generell Løsning
+

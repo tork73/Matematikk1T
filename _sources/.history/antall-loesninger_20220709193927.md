@@ -1,0 +1,3 @@
+# Antall løsninger til andregradslikninger
+
+

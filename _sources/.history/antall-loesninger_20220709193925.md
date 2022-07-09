@@ -1,0 +1,1 @@
+# Antall løsninger til andreg

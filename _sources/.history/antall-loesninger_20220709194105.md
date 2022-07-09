@@ -1,0 +1,17 @@
+# Antall løsninger til andregradslikninger
+
+
+Du har så langt lært å løse andregradslikninger ved å bruke abc-formelen. Du har kanskje oppdaget at andregradslikninger kan ha to, én eller ingen løsning. 
+Etter denne leksjonen skal du
+
+kunne drøfte antall løsninger til en likning
+kunne avgjøre betingelser på tallene $a$, $b$ og $c$ som gjør at likningen
+
+$$ a x^2+ b x + c = 0 $$
+
+har 
+    * to, 
+* én eller 
+* ingen løsning
+
+kunne lage et program i Python som gir riktige antall løsninger (og løsningene)

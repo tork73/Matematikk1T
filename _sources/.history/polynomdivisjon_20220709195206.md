@@ -1,0 +1,3 @@
+# Nullpunktsetningen og polynomdivisjon
+
+
