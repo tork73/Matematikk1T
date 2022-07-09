@@ -1,0 +1,3 @@
+# Funksjoner med Python
+
+
