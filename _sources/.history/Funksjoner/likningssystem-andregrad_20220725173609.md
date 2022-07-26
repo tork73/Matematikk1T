@@ -1,0 +1,1 @@
+# Likningssystem av andre grad
