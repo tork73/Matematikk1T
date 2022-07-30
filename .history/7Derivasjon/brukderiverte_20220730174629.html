@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruk av den deriverte &#8212; Matematikk 1T</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Søk" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1Inntro/matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../2Programmering/prorammering-inntro.html">
+   introduksjon til programmering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/regne-python.html">
+     Python som kalkulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/Betingelser.html">
+     Programmering med betingelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/while.html">
+     While-løkker
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../3Algebra/algebra-inntro.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/tallbehandling.html">
+     Tall og tallbehandling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/figurer.html">
+     Figurer og variable størrelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/algebraregning.html">
+     Å regne med bokstaver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/potenser.html">
+     Potenser
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../4Likninger/formler-likninger-intro.html">
+   introduksjon til likninger
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likningssystem.html">
+     Lineære likningssystem med og uten digitale verktøy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likninger-praksis.html">
+     Likninger i praksis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/formelregning.html">
+     Å regne med Formler
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Faktorisering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger-inntro.html">
+   Faktorisering og kvadratsetningene
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger.html">
+     Faktorisering og kvadratsetninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-vha-kvadratsetningen.html">
+     Faktorisering ved hjelp av kvadratsetningene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/enkle-kvadratiske-likninger.html">
+     Enkle kvadratiske likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/fullstendige-kvadrat-likning.html">
+     Fullstendige kvadrat og likningsløsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-rasjonale.html">
+     Faktorisering av  rasjonale uttrykk
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6Funksjoner/funksjoner-inntro.html">
+   Funksjoner
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/hva-er-en-funksjon.html">
+     Hva er en funksjon?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/lineaere.html">
+     Lineære funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradsfunksjoner.html">
+     Andregradsfunksjoner og grafene deres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nullpunkt.html">
+     Nullpunkt og likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/funksjoner_med_python.html">
+     Funksjoner med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradslikninger.html">
+     Andregradslikninger: en generell Løsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/antall-loesninger.html">
+     Antall løsninger til andregradslikninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/polynomdivisjon.html">
+     Nullpunktsetningen og polynomdivisjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/tallintervall.html">
+     Tallintervall og ulikheter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/likningssystem-andregrad.html">
+     Andregradslikningssystem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/rasjonale.html">
+     Rasjonale funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/eksponentialfunksjoner.html">
+     Eksponentialfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/potensfunksjoner.html">
+     Potensfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nummeriskloesning.html">
+     Nummerisk løsning av likninger med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/modellering.html">
+     Modellering med funksjoner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Undersøkelser av funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../7Derivasjon/inntro.html">
+   Stigningstall og tangenter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/tangenter.html">
+     Tangenten til en funsksjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/gjennomsnittligvekstfart.html">
+     Gjennomsnittlig vekstfart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/gjennomsnittlig-python.html">
+     Gjennomsnittlig vekstfart med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/deriverte.html">
+     Den deriverte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/brukderiverte.html">
+     Bruk av den deriverte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/definisjon-deriverte.html">
+     Algebraisk finisjon av den deriverte
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/.history/7Derivasjon/brukderiverte_20220730174629.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nar-den-deriverte-er-null">
+   Når den deriverte er null
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#areal-og-omkrets-av-to-kvadrater">
+   Areal og omkrets av to kvadrater
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-varierer">
+   Hva varierer?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppsummering-av-losning">
+   Oppsummering av løsning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storst-overflate">
+   Størst overflate
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Bruk av den deriverte</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nar-den-deriverte-er-null">
+   Når den deriverte er null
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#areal-og-omkrets-av-to-kvadrater">
+   Areal og omkrets av to kvadrater
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-varierer">
+   Hva varierer?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#oppsummering-av-losning">
+   Oppsummering av løsning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storst-overflate">
+   Størst overflate
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bruk-av-den-deriverte">
+<h1>Bruk av den deriverte<a class="headerlink" href="#bruk-av-den-deriverte" title="Permalink til denne oversikten">¶</a></h1>
+<p>Målet nå er at du skal</p>
+<ul class="simple">
+<li><p>vite hva terrasse-, topp- og bunnpunkt er</p></li>
+<li><p>kunne finne topp- og bunnpunkt ved den deriverte</p></li>
+<li><p>kunne analysere funksjoner</p></li>
+<li><p>kunne løse praktiske funksjonsoppgaver</p></li>
+</ul>
+<p><img alt="" src="../../_images/tangenter.png" /></p>
+<div class="section" id="nar-den-deriverte-er-null">
+<h2>Når den deriverte er null<a class="headerlink" href="#nar-den-deriverte-er-null" title="Permalink til denne oversikten">¶</a></h2>
+<p>I videoen nedenfor skal vi drøfte hva det vil si at <span class="math notranslate nohighlight">\( f'(x)=0\)</span>.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/299173827?h=0cb0bb820d&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>Figuren under viser grafen til to funksjoner.</p>
+<p><img alt="" src="../../_images/tografer.png" /></p>
+<p>Hvilken av de to funksjonene har denne fortegnslinja for den deriverte?</p>
+<p><img alt="" src="../../_images/frotegn1.png" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Fasit</p>
+<p>Det er <span class="math notranslate nohighlight">\(g\)</span> fordi i intervallene <span class="math notranslate nohighlight">\(x&lt;0 \vee  2&lt; x\)</span> synker <span class="math notranslate nohighlight">\( g\)</span> og det er det samme som at <span class="math notranslate nohighlight">\(g' &lt; 0\)</span>. I området <span class="math notranslate nohighlight">\( 0 &lt; x &lt; 2 \)</span> øker funksjonsverdiene mot høyre og <span class="math notranslate nohighlight">\(g'&gt;0\)</span>.</p>
+</div>
+<p>Funksjonen <span class="math notranslate nohighlight">\(f\)</span> er gitt ved <span class="math notranslate nohighlight">\(f(x)=-2x^3 + 6x-4\)</span></p>
+<p>I videoen nedenfor ser du en løsning på hvordan du kan bestemme eventuelle topp- og bunnpunkter på grafen til <span class="math notranslate nohighlight">\(f\)</span> ved regning.</p>
+<p>Prøv selv, før du ser videoen!</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/86110624?h=430df53303&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="areal-og-omkrets-av-to-kvadrater">
+<h2>Areal og omkrets av to kvadrater<a class="headerlink" href="#areal-og-omkrets-av-to-kvadrater" title="Permalink til denne oversikten">¶</a></h2>
+<p>Nå er vi klare til å se på praktisk bruk av derivasjon. Vi starter med å se på følgende problem.</p>
+<p><img alt="" src="../../_images/kvadrater.png" /></p>
+<p>Figuren ovenfor er satt sammen av to kvadrater. Omkretsen av figuren er 16.</p>
+<p>Hvor lange må sidene i hvert kvadrat være for at arealet av figuren skal bli minst mulig?</p>
+<p>Bruk litt tid på å sette deg inn i problemet og tenk på hvordan du vil løse den før du går videre. Kanskje kan figuren under være til hjelp?</p>
+<iframe src="https://www.geogebra.org/classic/bkhmbb4a?embed" width="800" height="600" allowfullscreen="" style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+</div>
+<div class="section" id="hva-varierer">
+<h2>Hva varierer?<a class="headerlink" href="#hva-varierer" title="Permalink til denne oversikten">¶</a></h2>
+<p>I starten virker slike problem ganske uoversiktlig. Vi må tenke oss godt om og prøve å se for oss hvordan figuren kan variere. Tenker vi oss om kan vi komme til at det er de to sidelengdene som vil endre seg. I og med at omkretsen skal være 16, vil de to sidelengdene være avhengige av hverandre.</p>
+<p>Da får vi bruk for variabler. Jeg velger å kalle de to sidelengdene for <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> og får denne figuren:</p>
+<p><img alt="" src="../../_images/kvadrater2.png" /></p>
+<p>Oppgaven gir at omkretsen skal være lik 16. Etter at jeg har innført variablene kan det uttrykkes matematisk og vi kan finne sammenhengen mellom de to sidelengdene</p>
+<div class="math notranslate nohighlight">
+\[O = 4 \cdot x + 4 \cdot y = 16 \implies y = \frac{16-4 \cdot x}{4} = 4 - x\]</div>
+<p>Ut fra den virkelige situasjonen ser vi at vi må begrense verdiene. Sidelengdene kan ikke bli negative. Det betyr at <span class="math notranslate nohighlight">\(x \in \lbrack 0, 4 \rbrack\)</span>. Det samme vil da gjelde for <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Da har vi funnet en sammenheng mellom de to sidelengdene og vi kan finne et funksjonsuttrykk for arealet av de to kvadratene</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+A(x) &amp;= x^2 + y^2 \\
+&amp;= x^2 + (4 - x)^2 \\
+&amp;= x^2 + 16 - 2 \cdot 4 \cdot x + x^2 \\
+&amp;= 2x^2 -8x + 16
+\end{align*}
+\end{split}\]</div>
+<p>Nå vet vi hvordan hele arealet varierer med den ene sidelengden. Vi er klare for å undersøke når dette arealet er minst. Det kan vi gjøre med det vi har lært tidligere.</p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>Prøv å finne det minste arealet ved å skrive et program i Python som løser oppgaven.</p>
+<p>Tenk også på hvordan du kan kontrollere svaret ditt med den deriverte.</p>
+<p>På neste side vil du se en video som går gjennom en løsning.</p>
+<p>Du kan skrive programmet her:</p>
+<iframe src="https://trinket.io/embed/python3/5e5f7bdf65" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+</div>
+<p>Her er en forklaring på hvordan oppgaven kan løses ved å benytte Python.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/512444644?h=005026dd65&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<br>
+<p>La oss også se hvordan vi kan finne et uttrykk for den deriverte når vi kjenner det opprinnelige funksjonsuttrykket.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/512445346?h=dc7fed242a&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="oppsummering-av-losning">
+<h2>Oppsummering av løsning<a class="headerlink" href="#oppsummering-av-losning" title="Permalink til denne oversikten">¶</a></h2>
+<p>Da har vi løst oppgaven hvor vi skulle finne det minste arealet de to kvadratene kan ha.</p>
+<p><img alt="" src="../../_images/kvadrater2.png" /></p>
+<p>Vi laget et program i Python som fant den gjennomsnittlige vekstfarten til mange x-verdier og tegnet punktene opp i koordinatsystemet. I programmet under er det funnet stigningstallet til sekanter i svært små intervall. De er bestemt av verdien til variabelen h. Grafen vi får tegnet er en tilnærming av grafen til den deriverte funksjonen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="k">def</span> <span class="nf">a</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">16</span>
+
+<span class="k">def</span> <span class="nf">Da</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">a</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="n">h</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Da</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Vi fant ut at den deriverte var <span class="math notranslate nohighlight">\(A'(x)=4x-8\)</span> både ved å se på grafen, ved å bruke derivasjonsregler og benytte GeoGebra. Ved å finne når den deriverte er lik null kan vi slå fast den minste verdien funksjonen kan ha. I dette tilfellet er det når
+<span class="math notranslate nohighlight">\(x=2\)</span>. Arealet blir da <span class="math notranslate nohighlight">\(A(2)=8\)</span>.</p>
+</div>
+<div class="section" id="storst-overflate">
+<h2>Størst overflate<a class="headerlink" href="#storst-overflate" title="Permalink til denne oversikten">¶</a></h2>
+<p>Nå skal vi se på et nytt problem.</p>
+<p>Ei eske skal romme 100 liter og ha en kvadratisk bunn. Hva må høyden være for at overflaterarealet skal være minst mulig?</p>
+<p><img alt="" src="../../_images/eske1.png" /></p>
+<p>Videoen under gir en løsning på oppgaven.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history/7Derivasjon"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potensfunksjoner &#8212; Matematikk 1T</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Søk" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1Inntro/matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../2Programmering/prorammering-inntro.html">
+   introduksjon til programmering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/regne-python.html">
+     Python som kalkulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/Betingelser.html">
+     Programmering med betingelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/while.html">
+     While-løkker
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../3Algebra/algebra-inntro.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/tallbehandling.html">
+     Tall og tallbehandling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/figurer.html">
+     Figurer og variable størrelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/algebraregning.html">
+     Å regne med bokstaver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/potenser.html">
+     Potenser
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../4Likninger/formler-likninger-intro.html">
+   introduksjon til likninger
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likningssystem.html">
+     Lineære likningssystem med og uten digitale verktøy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likninger-praksis.html">
+     Likninger i praksis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/formelregning.html">
+     Å regne med Formler
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Faktorisering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger-inntro.html">
+   Faktorisering og kvadratsetningene
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger.html">
+     Faktorisering og kvadratsetninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-vha-kvadratsetningen.html">
+     Faktorisering ved hjelp av kvadratsetningene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/enkle-kvadratiske-likninger.html">
+     Enkle kvadratiske likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/fullstendige-kvadrat-likning.html">
+     Fullstendige kvadrat og likningsløsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-rasjonale.html">
+     Faktorisering av  rasjonale uttrykk
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6Funksjoner/funksjoner-inntro.html">
+   Funksjoner
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/hva-er-en-funksjon.html">
+     Hva er en funksjon?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/lineaere.html">
+     Lineære funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradsfunksjoner.html">
+     Andregradsfunksjoner og grafene deres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nullpunkt.html">
+     Nullpunkt og likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/funksjoner_med_python.html">
+     Funksjoner med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradslikninger.html">
+     Andregradslikninger: en generell Løsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/antall-loesninger.html">
+     Antall løsninger til andregradslikninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/polynomdivisjon.html">
+     Nullpunktsetningen og polynomdivisjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/tallintervall.html">
+     Tallintervall og ulikheter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/likningssystem-andregrad.html">
+     Andregradslikningssystem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/rasjonale.html">
+     Rasjonale funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/eksponentialfunksjoner.html">
+     Eksponentialfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/potensfunksjoner.html">
+     Potensfunksjoner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/.history/6Funksjoner/potensfunksjoner_20220728205302.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-en-potensfunksjon">
+   Hva er en potensfunksjon?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#egenskaper-til-potensfunksjoner">
+   Egenskaper til potensfunksjoner
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Potensfunksjoner</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hva-er-en-potensfunksjon">
+   Hva er en potensfunksjon?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#egenskaper-til-potensfunksjoner">
+   Egenskaper til potensfunksjoner
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="potensfunksjoner">
+<h1>Potensfunksjoner<a class="headerlink" href="#potensfunksjoner" title="Permalink til denne oversikten">¶</a></h1>
+<p>Nå har turen kommet til å se på funksjoner hvor variabelen er grunntallet.</p>
+<p>Målet er at du skal kunne utforske og beskrive egenskapene til potensfunksjoner.</p>
+<div class="section" id="hva-er-en-potensfunksjon">
+<h2>Hva er en potensfunksjon?<a class="headerlink" href="#hva-er-en-potensfunksjon" title="Permalink til denne oversikten">¶</a></h2>
+<p>Tidligere har du lært at en potens er et produkt der alle faktorene er like. I</p>
+<div class="math notranslate nohighlight">
+\[ 3 \cdot 3 \cdot 3 \cdot 3 = 3^4 \]</div>
+<p>er <span class="math notranslate nohighlight">\(3\)</span> grunntallet og <span class="math notranslate nohighlight">\(4\)</span> eksponenten i potensen <span class="math notranslate nohighlight">\(3^4\)</span>. Ved å la grunntallet i potensen være variabelen <span class="math notranslate nohighlight">\(x\)</span>, skaper du en potensfunksjon.</p>
+<div class="important admonition">
+<p class="admonition-title">Definisjon</p>
+<p>En <strong>potensfunksjon</strong> er en funksjon som kan skrives på formen</p>
+<div class="math notranslate nohighlight">
+\[f(x)=a \cdot x^b \]</div>
+<p>der  <span class="math notranslate nohighlight">\(a, b \in \mathbb{R}\)</span> og <span class="math notranslate nohighlight">\(x&gt;0\)</span></p>
+</div>
+<p>Årsaken til at vi generelt må kreve at <span class="math notranslate nohighlight">\(x&gt;0\)</span> er at om for eksempel <span class="math notranslate nohighlight">\(b=0.5\)</span>, så får vi kvadratrotfunksjonen. Vi vet at nå vi jobber med reelle tall, så kan vi ikke ta kvadratroten av et negativt tall. Dersom <span class="math notranslate nohighlight">\(b&lt;0\)</span> kan vi heller ikke ha <span class="math notranslate nohighlight">\(x=0\)</span> med i definisjonsmengden, siden vi da ville ha delt på 0.</p>
+<p>Du har allerede sett på noen potensfunksjoner. Er det ikke noe kjent med denne?</p>
+<div class="math notranslate nohighlight">
+\[f(x)=3 \cdot x^2\]</div>
+<p>Den kan også kalles en andregradsfunksjon.</p>
+<p>Et annet eksempel er den her:</p>
+<div class="math notranslate nohighlight">
+\[g(x)=2 \cdot x^{-2}\]</div>
+<p>Med definisjonen av en negativ eksponent i potensregningen kan du gjerne skrive den som:</p>
+<div class="math notranslate nohighlight">
+\[g(x)=2 \cdot x^{-2}= \dfrac{2}{x^2}\]</div>
+<p>og da har du en rasjonal funksjon.</p>
+<p>Nå skal du se på noen funksjoner som bare er potensfunksjoner og de har ikke hele tall som eksponent. Her er et par eksempler</p>
+<div class="math notranslate nohighlight">
+\[h(x)=5,1 \cdot x^{0.23}\]</div>
+<div class="math notranslate nohighlight">
+\[i(x)=4 \cdot x^{-0.7}\]</div>
+<p>Andre eksempler er funksjoner med et rotuttrykk.</p>
+<div class="math notranslate nohighlight">
+\[j(x)=\sqrt[3]{x}= x^{\frac{1}{3}}\]</div>
+<p><img alt="" src="../../_images/RootAndPowerFunctions.svg" /></p>
+</div>
+<div class="section" id="egenskaper-til-potensfunksjoner">
+<h2>Egenskaper til potensfunksjoner<a class="headerlink" href="#egenskaper-til-potensfunksjoner" title="Permalink til denne oversikten">¶</a></h2>
+<p>Nedenfor kan du undersøke hvordan grafen til <span class="math notranslate nohighlight">\(f(x)=x^r\)</span> ser ut for ulike verdier for <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>a) Hva må til for at definisjonmengden til <span class="math notranslate nohighlight">\(f\)</span> skal være alle reelle tall (også negative)?</p></p>
+<p>b) For hvilke  verdier for <span class="math notranslate nohighlight">\(r\)</span> kan <span class="math notranslate nohighlight">\(x\)</span> være 0? </p></p>
+<p><iframe scrolling="no" src="https://www.geogebratube.org/material/iframe/id/mdstfqu3/width/713/height/534/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/preferhtml5" width="713px" height="534px" style="border: 0px;"> </iframe></p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>Nedenfor har vi tegnet fire grafer. Disse er grafene til funksjonene</p>
+<div class="math notranslate nohighlight">
+\[ f(x)=2\cdot x^{0.3}\]</div>
+<div class="math notranslate nohighlight">
+\[ g(x)=2\cdot x^{1.7}\]</div>
+<div class="math notranslate nohighlight">
+\[ h(x)=2\cdot x^{2.3}\]</div>
+<div class="math notranslate nohighlight">
+\[ k(x)=2\cdot x^{0.7}\]</div>
+<p>Hvilke graf hører til hvilke funksjon?</p>
+<p><img alt="" src="../../_images/potensfunksjon1.png" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Fasit</p>
+<p>A er grafen til <span class="math notranslate nohighlight">\(h\)</span>, B er grafen til <span class="math notranslate nohighlight">\(g\)</span>, C er grafen til <span class="math notranslate nohighlight">\(k\)</span> og D er grafen til <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 2</p>
+<p>Nedenfor har vi tegnet grafene til fem potensfunksjoner på forme <span class="math notranslate nohighlight">\(y=a\cdot x^b\)</span>. Bestem <span class="math notranslate nohighlight">\(a\)</span> i hvert tilfelle.</p>
+<p><img alt="" src="../../_images/potensfunksjon2.png" /></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Fasit</p>
+<p>A er grafen til <span class="math notranslate nohighlight">\(f(x)=4\cdot x^{1.7}\)</span></p>
+<p>B er grafen til <span class="math notranslate nohighlight">\(g(x)=3\cdot x^{1.7}\)</span></p>
+<p>C er grafen til <span class="math notranslate nohighlight">\(h(x)=2\cdot x^{1.7}\)</span></p>
+<p>D er grafen til <span class="math notranslate nohighlight">\(i(x)=1\cdot x^{1.7}\)</span></p>
+<p>E er grafen til <span class="math notranslate nohighlight">\(j(x)=0.5\cdot x^{1.7}\)</span></p>
+<p>Det er ikke forventet at du skal bestemme eksonenten <span class="math notranslate nohighlight">\(1.7\)</span> i denne oppgaven.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 3</p>
+<p>Hos pattedyr med fire bein er det vanlig at forholdet mellom bredden av leggen og kroppslengden følger denne formelen.</p>
+<p>$$\text{leggbredde} = \text{en konstant} \cdot\text{kroppslengde3/2</p>
+<p>Konstanten varierer, men ellers stemmer formelen godt for alt fra mus til elefant.</p>
+<p>For hunden på bildet er konstanten funnet. Funksjonsuttrykket som viser sammenhengen mellom leggbredde (l) og kroppslengde (k) er gitt ved:</p>
+<p>[l(k)=0.0011 \cdot k^{\frac{3}{2}}]</p>
+<p>Alle lengdene er i millimeter.</p>
+<p>En gang da hunden var valp ble leggbredden målt til 17 mm. Hvor mange mm var kroppslengden da? (Oppgi svaret uten enhet).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history/6Funksjoner"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

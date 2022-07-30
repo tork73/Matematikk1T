@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nummerisk løsning av likninger med Python &#8212; Matematikk 1T</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Søk" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1Inntro/matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../2Programmering/prorammering-inntro.html">
+   introduksjon til programmering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/regne-python.html">
+     Python som kalkulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/Betingelser.html">
+     Programmering med betingelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/while.html">
+     While-løkker
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../3Algebra/algebra-inntro.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/tallbehandling.html">
+     Tall og tallbehandling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/figurer.html">
+     Figurer og variable størrelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/algebraregning.html">
+     Å regne med bokstaver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/potenser.html">
+     Potenser
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../4Likninger/formler-likninger-intro.html">
+   introduksjon til likninger
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likningssystem.html">
+     Lineære likningssystem med og uten digitale verktøy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likninger-praksis.html">
+     Likninger i praksis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/formelregning.html">
+     Å regne med Formler
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Faktorisering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger-inntro.html">
+   Faktorisering og kvadratsetningene
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger.html">
+     Faktorisering og kvadratsetninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-vha-kvadratsetningen.html">
+     Faktorisering ved hjelp av kvadratsetningene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/enkle-kvadratiske-likninger.html">
+     Enkle kvadratiske likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/fullstendige-kvadrat-likning.html">
+     Fullstendige kvadrat og likningsløsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-rasjonale.html">
+     Faktorisering av  rasjonale uttrykk
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6Funksjoner/funksjoner-inntro.html">
+   Funksjoner
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/hva-er-en-funksjon.html">
+     Hva er en funksjon?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/lineaere.html">
+     Lineære funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradsfunksjoner.html">
+     Andregradsfunksjoner og grafene deres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nullpunkt.html">
+     Nullpunkt og likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/funksjoner_med_python.html">
+     Funksjoner med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradslikninger.html">
+     Andregradslikninger: en generell Løsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/antall-loesninger.html">
+     Antall løsninger til andregradslikninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/polynomdivisjon.html">
+     Nullpunktsetningen og polynomdivisjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/tallintervall.html">
+     Tallintervall og ulikheter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/likningssystem-andregrad.html">
+     Andregradslikningssystem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/rasjonale.html">
+     Rasjonale funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/eksponentialfunksjoner.html">
+     Eksponentialfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/potensfunksjoner.html">
+     Potensfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nummeriskloesning.html">
+     Nummerisk løsning av likninger med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/modellering.html">
+     Modellering med funksjoner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Undersøkelser av funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../7Derivasjon/inntro.html">
+   Stigningstall og tangenter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/tangenter.html">
+     Tangenten til en funsksjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/gjennomsnittligvekstfart.html">
+     Gjennomsnittlig vekstfart
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/.history/6Funksjoner/nummeriskloesning_20220730143036.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduksjon-til-numerisk-losning-av-likninger">
+   Introduksjon til numerisk løsning av likninger
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nummerisk-losning-vi-finner-et-nullpunkt">
+   Nummerisk løsning; vi finner et nullpunkt
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vi-finner-nullpuntkene-i-et-intervall">
+   Vi finner nullpuntkene i et intervall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatering-av-print-funksjonen">
+   Formatering av print-funksjonen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Nummerisk løsning av likninger med Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduksjon-til-numerisk-losning-av-likninger">
+   Introduksjon til numerisk løsning av likninger
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nummerisk-losning-vi-finner-et-nullpunkt">
+   Nummerisk løsning; vi finner et nullpunkt
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vi-finner-nullpuntkene-i-et-intervall">
+   Vi finner nullpuntkene i et intervall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formatering-av-print-funksjonen">
+   Formatering av print-funksjonen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="nummerisk-losning-av-likninger-med-python">
+<h1>Nummerisk løsning av likninger med Python<a class="headerlink" href="#nummerisk-losning-av-likninger-med-python" title="Permalink til denne oversikten">¶</a></h1>
+<p>De fleste likninger kan være vanskelige å løse algebraisk. Her skal du lære hvordan du kan løse slike ved å bruke numeriske metoder.</p>
+<p>Du skal kunne</p>
+<ul class="simple">
+<li><p>forstå en algoritme som finner nullpunktene til en funksjon i et gitt intervall</p></li>
+<li><p>lage et program som utfører algoritmen</p></li>
+<li><p>kunne formatere svaret på en fornuftig måte</p></li>
+<li><p>forstå hvordan halveringsmetoden virker</p></li>
+<li><p>kunne lage et program som gjennomfører denne</p></li>
+<li><p>vurdere hvordan du kan tilpasse algoritmen slik at du får kontroll * på antall riktige desimaler i svaret.</p></li>
+</ul>
+<p><img alt="" src="../../_images/nullpunkt-num.png" /></p>
+<div class="section" id="introduksjon-til-numerisk-losning-av-likninger">
+<h2>Introduksjon til numerisk løsning av likninger<a class="headerlink" href="#introduksjon-til-numerisk-losning-av-likninger" title="Permalink til denne oversikten">¶</a></h2>
+<p>I filmen nedenfor viser vi hvorfor det er viktig å kunne løse likninger numerisk. Vi viser hvordan vi kan løse likningen</p>
+<div class="math notranslate nohighlight">
+\[ 2^x + 3^{-x}=3\]</div>
+<p>ved å bruke GeoGebra. Vi skal senere lage program i Python som gjør noe tilsvarende det som GeoGebra gjør.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/484465523?h=1b5aae633b&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+<div class="section" id="nummerisk-losning-vi-finner-et-nullpunkt">
+<h2>Nummerisk løsning; vi finner et nullpunkt<a class="headerlink" href="#nummerisk-losning-vi-finner-et-nullpunkt" title="Permalink til denne oversikten">¶</a></h2>
+<p>I filmen nedenfor viser vi en enkel algoritme som finner et nullpunkt til en funksjon. Vi starter med en startverdi og sjekker funksjonsverdien i de ulike punkta. Vi vet at dersom grafen krysser x-aksen i et intervall, så må det være et nullpunkt i dette intervallet. Dette gjelder i hvert fall når grafen er sammenhengende.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/484373483?h=790e1d7f6f&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>I forrige film fant vi en løsning til likningen <span class="math notranslate nohighlight">\(2^x-3x=0\)</span>. Vi fant at <span class="math notranslate nohighlight">\(x\approx 0.458\)</span>. Vi brukte da følgende kode:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">2</span><span class="o">**</span><span class="n">x</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">f</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+  <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="mf">0.001</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nullpunkter er x = &quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="" src="../../_images/trinket_plot1.png" /></p>
+<p>Vi har tegnet grafen til <span class="math notranslate nohighlight">\(f(x)=2^x-3x\)</span> ovenfor. Vi ser at likningen <span class="math notranslate nohighlight">\(2^x-3x=0\)</span> har to løsninger.</p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>Gjør modifikasjoner av koden over og finn det andre nullpunktet. Skriv inn tallet med to desimalers nøyaktighet.</p>
+<iframe src="https://trinket.io/embed/python3/9021e6434a" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="section" id="vi-finner-nullpuntkene-i-et-intervall">
+<h2>Vi finner nullpuntkene i et intervall<a class="headerlink" href="#vi-finner-nullpuntkene-i-et-intervall" title="Permalink til denne oversikten">¶</a></h2>
+<p>I filmen nedenfor finner vi de to nullpunktene til funksjonen <span class="math notranslate nohighlight">\(f(x)=2^x+3^{-x}-3\)</span> ved å bruke en numerisk algoritme.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/484526773?h=5d23b65641&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>I filmen på forrige side laget vi følgende program:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">2</span><span class="o">**</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span>
+  
+<span class="n">start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">slutt</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">start</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+<span class="k">while</span> <span class="n">x</span><span class="o">+</span><span class="n">d</span> <span class="o">&lt;</span> <span class="n">slutt</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">d</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nullpunkt i x=&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
+
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 2</p>
+<p>Nå skal du lage et tilsvarende program som finner nullpunktene til funksjonen <span class="math notranslate nohighlight">\(g(x)=2^{-x^2+5}-1\)</span> i intervallet <span class="math notranslate nohighlight">\([-3, 3] \)</span>.
+Du kan lage programmet her:</p>
+<iframe src="https://trinket.io/embed/python3/0462eaeb5d" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+</div>
+</div>
+<div class="section" id="formatering-av-print-funksjonen">
+<h2>Formatering av print-funksjonen<a class="headerlink" href="#formatering-av-print-funksjonen" title="Permalink til denne oversikten">¶</a></h2>
+<p>Når vi skal printe desimaltall, kan det være hensiktsmessig å kunne formatere tallet slik at vi får ønsket antall desimaler med. Når vi løste likningen <span class="math notranslate nohighlight">\(2^x+3^{-x}-3=0\)</span>  fikk vi for eksempel at den ene løsningen var <span class="math notranslate nohighlight">\(x=-0.8078000000001313\)</span>. En fin måte å gjøre dette på er å bruke det som kalles for f-strenger. Det vil si formaterte strenger. I filmen nedenfor viser vi hvordan vi kan gjøre dette.</p>
+<div style="padding:56.31% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/484789057?h=895609d8cd&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p>Vi bruker f-strenger på følgende måte:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&lt;Det vi vil printe&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Mellom anførselstegnene kan du skrive vanlig tekst og du kan hente størrelsen til de ulike variablene du har laget i programmet. Har du for eksempel et en variabel a som er et desimaltall kan du formatere antall desimaler på følgende måte:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Her er a: </span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Da vil vi få skrevet ut for eksempel «Her er a: 2.323» (om a for eksempel har verdien 2.323443434342).</p>
+<p>Prøv selv nedenfor. Se om du kan skrive ut tallet π med 5 desimaler. Husk at må importere π. Det kan du gjøre ved å skrive</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+</pre></div>
+</div>
+<iframe src="https://trinket.io/embed/python3/4cdd795fa2" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+<p>Vi har jobbet med to algoritmer som løser likninger nummerisk. Begge algoritmene søkte etter x-verdier der funksjonsverdien skifter fortegn. Vi brukte at en funksjon <span class="math notranslate nohighlight">\(f\)</span> har ulikt fortegn i to punkt <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\( b\)</span> dersom</p>
+<div class="math notranslate nohighlight">
+\[f(a)\cdot f(b) &lt; 0 \]</div>
+<p>Dersom dette gjelder (eller vi får lik 0), så vet vi at det er et nullpunkt i intervallet <span class="math notranslate nohighlight">\([a, b] \)</span>. Dette gjelder dersom grafen til <span class="math notranslate nohighlight">\( f\)</span> er sammenhengende.</p>
+<p>Vi har også sett at vi kan formatere print ved å bruke f-formatering. Her er et eksempel på en slik formatering:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Løsningen er x= </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Vi kan også gjøre utregninger inne i krøllparentesene:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Summen av </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> og </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> er </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<!-- % Dette må jeg se på senere... 
+
+<p>Før vi skal programmere i Python, har vi en oppgave til deg.&nbsp;</p>
+<p>Vi har valgt et tall mellom 1 og 100. Kan du gjette hvilket tall det er? Hvor mange forsøk trenger du?
+</p> -->
+<div class="form">%
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;input type=&quot;text&quot; id=&quot;guessField&quot; class=&quot;guessField&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Skriv inn tall og klikk her!&quot; class=&quot;guessSubmit&quot; %id=&quot;submitguess&quot;&gt;
+</pre></div>
+</div>
+<!-- 
+<script type="text/javascript">
+    // random value generated 
+    var y = Math.floor(Math.random() * 100 + 1);
+
+    // counting the number of guesses 
+    // made for correct Guess 
+    var guess = 1;
+
+    document.getElementById("submitguess").onclick = function() {
+
+        // number guessed by user      
+        var x = document.getElementById("guessField").value;
+
+        if (x == y) {
+            alert("Gratulerer! " +
+                guess + " forsøk ");
+        } else if (x > y)
+        /* if guessed number is greater 
+                          than actual number*/
+        {
+            guess++;
+            alert("Tallet er dessverre for stort. Prøv et mindre tall! ");
+        } else {
+            guess++;
+            alert("Tallet er dessverre for lite. Prøv med et større tall! ")
+        }
+    }
+</script>
+
+<p><br></p>
+<p>Kan du forklare hvorfor du alltid kan klare å komme fram til riktig tall etter høyst 7 forsøk?</p> -->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history/6Funksjoner"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+# Algebraisk finisjon av den deriverte
+
+
+Her skal du lære deg definisjonen av den deriverte og bruke den til å utlede derivasjonsregler.
+
+![](/bilder/defderiverte.jpg)
+
+I tidligere leksjoner har du jobbet med både momentan og gjennomsnittlig vekstfart. Nå skal du se hvordan man binder disse sammen og blir til et av de kraftigste verktøyene som er i matematikken. I videoen under skal du få se definisjonen av den deriverte.
+
+<iframe src="https://players.brightcove.net/4806596774001/BkLm8fT_default/index.html?videoId=6091703611001" height="360" width="640" allowfullscreen="" frameborder="0"></iframe>
+
+I forrige video så du at definisjonen av den deriverte er på formen:
+
+$$f´(x)= \lim_{\Delta x->0} \frac{f(x+\Delta x)-f(x)}{\Delta x}$$
+
+For mange er det uvant å sette inn annet enn tall i en funksjon.
+
+Hvis \(f(x)=x^2-3x\) så husker du sikkert hvordan du regner ut funksjonsverdier som:
+
+\(f(1)=1^2-3\cdot 1=-2\)
+
+ \(f(3)=3^2-3\cdot 3=0\)
+
+Men hva om man skal sette inn \((x+\Delta x)\) eller andre uttrykk? Her kommer noen eksempler:
+
+Hvis \(f(x)=x^2-3x\) så er
+
+\(f(a)=a^2-3a\)
+
+\(f(x+1)=(x+1)^2-3\cdot(x+1)=x^2+2x+1-3x-3=x^2-x-2\)
+
+Legg merke til at vi satte inn \((x+1)\) alle steder hvor det sto \(x\) i funksjonsuttrykket.
+
+\(f(a+b)=(a+b)^2-3(a+b)=a^2+2ab+b^2-3a-3b\)
+
+\(f(x+\Delta x)=(x+\Delta x)^2-3(x+\Delta x)=x^2+2x\Delta x+\Delta x^2-3x-3\Delta x\)
+
+Nå kan du prøve deg på noen tilsvarende oppgaver.

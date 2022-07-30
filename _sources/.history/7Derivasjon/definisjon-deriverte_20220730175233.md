@@ -1,0 +1,1 @@
+# Algebraisk finisjon av den deriverte

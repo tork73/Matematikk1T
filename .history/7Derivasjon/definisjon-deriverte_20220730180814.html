@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+
+<html lang="nb">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algebraisk finisjon av den deriverte &#8212; Matematikk 1T</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Søk" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="nb">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Matematikk 1T</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Matematikk 1T
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Mer enn regning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../1Inntro/matematikk.html">
+   Å bli god i matematikk
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inntro til programmering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../2Programmering/prorammering-inntro.html">
+   introduksjon til programmering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/regne-python.html">
+     Python som kalkulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/Betingelser.html">
+     Programmering med betingelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../2Programmering/while.html">
+     While-løkker
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Algebra
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../3Algebra/algebra-inntro.html">
+   Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/tallbehandling.html">
+     Tall og tallbehandling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/figurer.html">
+     Figurer og variable størrelser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/algebraregning.html">
+     Å regne med bokstaver
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../3Algebra/potenser.html">
+     Potenser
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Formler og likninger
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../4Likninger/formler-likninger-intro.html">
+   introduksjon til likninger
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likningssystem.html">
+     Lineære likningssystem med og uten digitale verktøy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/likninger-praksis.html">
+     Likninger i praksis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../4Likninger/formelregning.html">
+     Å regne med Formler
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Faktorisering
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger-inntro.html">
+   Faktorisering og kvadratsetningene
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-kvadratsetninger.html">
+     Faktorisering og kvadratsetninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-vha-kvadratsetningen.html">
+     Faktorisering ved hjelp av kvadratsetningene
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/enkle-kvadratiske-likninger.html">
+     Enkle kvadratiske likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/fullstendige-kvadrat-likning.html">
+     Fullstendige kvadrat og likningsløsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../5Faktorisering/faktorisering-rasjonale.html">
+     Faktorisering av  rasjonale uttrykk
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../6Funksjoner/funksjoner-inntro.html">
+   Funksjoner
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/hva-er-en-funksjon.html">
+     Hva er en funksjon?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/lineaere.html">
+     Lineære funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradsfunksjoner.html">
+     Andregradsfunksjoner og grafene deres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nullpunkt.html">
+     Nullpunkt og likninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/funksjoner_med_python.html">
+     Funksjoner med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/andregradslikninger.html">
+     Andregradslikninger: en generell Løsning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/antall-loesninger.html">
+     Antall løsninger til andregradslikninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/polynomdivisjon.html">
+     Nullpunktsetningen og polynomdivisjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/tallintervall.html">
+     Tallintervall og ulikheter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/likningssystem-andregrad.html">
+     Andregradslikningssystem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/rasjonale.html">
+     Rasjonale funksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/eksponentialfunksjoner.html">
+     Eksponentialfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/potensfunksjoner.html">
+     Potensfunksjoner
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/nummeriskloesning.html">
+     Nummerisk løsning av likninger med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../6Funksjoner/modellering.html">
+     Modellering med funksjoner
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Undersøkelser av funksjoner
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../7Derivasjon/inntro.html">
+   Stigningstall og tangenter
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/tangenter.html">
+     Tangenten til en funsksjon
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/gjennomsnittligvekstfart.html">
+     Gjennomsnittlig vekstfart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/gjennomsnittlig-python.html">
+     Gjennomsnittlig vekstfart med Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/deriverte.html">
+     Den deriverte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/brukderiverte.html">
+     Bruk av den deriverte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../7Derivasjon/definisjon-deriverte.html">
+     Algebraisk finisjon av den deriverte
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/.history/7Derivasjon/definisjon-deriverte_20220730180814.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grenser">
+   Grenser
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Algebraisk finisjon av den deriverte</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grenser">
+   Grenser
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="algebraisk-finisjon-av-den-deriverte">
+<h1>Algebraisk finisjon av den deriverte<a class="headerlink" href="#algebraisk-finisjon-av-den-deriverte" title="Permalink til denne oversikten">¶</a></h1>
+<p>Her skal du lære deg definisjonen av den deriverte og bruke den til å utlede derivasjonsregler.</p>
+<p><img alt="" src="../../_images/defderiverte.jpg" /></p>
+<p>I tidligere leksjoner har du jobbet med både momentan og gjennomsnittlig vekstfart. Nå skal du se hvordan man binder disse sammen og blir til et av de kraftigste verktøyene som er i matematikken. I videoen under skal du få se definisjonen av den deriverte.</p>
+<iframe src="https://players.brightcove.net/4806596774001/BkLm8fT_default/index.html?videoId=6091703611001" height="360" width="640" allowfullscreen="" frameborder="0"></iframe>
+<p>I forrige video så du at definisjonen av den deriverte er på formen:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[f'(x)= \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}\]</div>
+</div></blockquote>
+<p>For mange er det uvant å sette inn annet enn tall i en funksjon.</p>
+<p>Hvis <span class="math notranslate nohighlight">\(f(x)=x^2-3x\)</span> så husker du sikkert hvordan du regner ut funksjonsverdier som:</p>
+<p><span class="math notranslate nohighlight">\(f(1)=1^2-3\cdot 1=-2\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(3)=3^2-3\cdot 3=0\)</span></p>
+<p>Men hva om man skal sette inn <span class="math notranslate nohighlight">\((x+\Delta x)\)</span> eller andre uttrykk? Her kommer noen eksempler:</p>
+<p>Hvis <span class="math notranslate nohighlight">\(f(x)=x^2-3x\)</span> så er</p>
+<p><span class="math notranslate nohighlight">\(f(a)=a^2-3a\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(x+1)=(x+1)^2-3\cdot(x+1)=x^2+2x+1-3x-3=x^2-x-2\)</span></p>
+<p>Legg merke til at vi satte inn <span class="math notranslate nohighlight">\((x+1)\)</span> alle steder hvor det sto <span class="math notranslate nohighlight">\(x\)</span> i funksjonsuttrykket.</p>
+<p><span class="math notranslate nohighlight">\(f(a+b)=(a+b)^2-3(a+b)=a^2+2ab+b^2-3a-3b\)</span></p>
+<p><span class="math notranslate nohighlight">\(f(x+\Delta x)=(x+\Delta x)^2-3(x+\Delta x)=x^2+2x\Delta x+\Delta x^2-3x-3\Delta x\)</span></p>
+<p>Nå kan du prøve deg på noen tilsvarende oppgaver.</p>
+<div class="note admonition">
+<p class="admonition-title">Oppgave 1</p>
+<p>Vi har gitt funksjonen <span class="math notranslate nohighlight">\(g(x)=2x^2-4x+1\)</span></p>
+<p>Regn ut</p>
+<p>a) <span class="math notranslate nohighlight">\(g(x+1)\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(g(x+\Delta x)\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Løsning</p>
+<p>a)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+g(x+1) &amp;= 2(x+1)^2-4(x+1)+1 \\ &amp;=2(x^2+2x+1)-4x-4+1 \\ 
+    &amp;= 2x^2+4x+2-4x-3 \\
+    &amp;=2x^2-1
+\end{align*}
+\end{split}\]</div>
+<p>b)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+g(x+\Delta x) &amp;=2(x+\Delta x)^2-4(x+\Delta x)+1\\
+&amp;=2(x^2+2x\Delta x+(\Delta x)^2)-4x-4\Delta x+1\\
+&amp;=2x^2+4x\Delta x+2(\Delta x)^2-4x-4\Delta x+1
+\end{align*}
+\end{split}\]</div>
+</div>
+<div class="section" id="grenser">
+<h2>Grenser<a class="headerlink" href="#grenser" title="Permalink til denne oversikten">¶</a></h2>
+<p>Uttrykket <span class="math notranslate nohighlight">\( \lim \)</span> betyr en grense og da blir <span class="math notranslate nohighlight">\(\displaystyle{ \lim_{\Delta x \to 0} }\)</span> grensen når <span class="math notranslate nohighlight">\(\Delta x\)</span> nærmer seg <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Når du skal derivere <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> ved bruk av derivasjonen, skal du undersøke hva uttrykket <span class="math notranslate nohighlight">\( \frac{f(x+\Delta x)-f(x)}{\Delta x}\)</span> går mot når <span class="math notranslate nohighlight">\( \Delta x\)</span> går mot null. Først må du bruke dine kunnskaper og skrive uttrykket enklere for du undersøker grensen.</p>
+<div class="important admonition">
+<p class="admonition-title">Den deriverte</p>
+<p>Den deriverte <span class="math notranslate nohighlight">\(f'\)</span> til en funksjon er definert ved</p>
+<div class="math notranslate nohighlight">
+\[ f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./.history/7Derivasjon"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Tor Espen Kristensen/Digilær<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
